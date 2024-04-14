@@ -1,0 +1,98 @@
+Unnamed: 0,Name,Category,Street,ZIP,Phone Number,Email,Website,Full Address,Latitude,Longitude
+0,Rzeszow University of Technology,Education,al. Powsta?ców Warszawy 12,35-959 Rzeszów,tel. 17 865 11 00,kancelaria@prz.edu.pl,https://w.prz.edu.pl/,"al. Powsta?ców Warszawy 12, 35-959 Rzeszów",50.019363,21.98884
+1,University of Warsaw,Education,Krakowskie Przedmie?cie 26/28,00-927 Warszawa,tel. +48 22 55 20 000,-,https://irk.uw.edu.pl/en-gb/,"Krakowskie Przedmie?cie 26/28, 00-927 Warszawa",52.240883,21.017806
+2,Gda?sk University of Technology,Education,Narutowicza 11/12,80-233 Gda?sk,tel. +48 692-422-454,ctw@pg.edu.pl,https://www.centrumwodorowe.pl/,"Narutowicza 11/12, 80-233 Gda?sk",48.18856565,17.18911517577356
+3,Silesian University of Technology,Education,Akademicka 2a,44-100 Gliwice,tel. 32 237 10 00,-,-,"Akademicka 2a, 44-100 Gliwice",50.2895655,18.677579
+4,AGH University of Krakow,Education,al. Mickiewicza 30,30-059 Kraków,tel. 12 617 22 22,-,https://www.agh.edu.pl/,"al. Mickiewicza 30, 30-059 Kraków",50.064485,19.923628
+5,Cracow University of Technology,Education,Warszawska 24,31-155 Kraków,tel. 12 628 22 05,kancelaria@pk.edu.pl,https://www.pk.edu.pl/,"Warszawska 24, 31-155 Kraków",50.0712118,19.9431226
+6,Uniqate Sp. z o. o.,Education,Pogodna 3,05-083 Wiktorów,tel. 661 904 433,contact@uniqate.pl,https://uniqate.pl/,"Pogodna 3, 05-083 Wiktorów",52.262183,20.692474
+7,Warsaw University of Technology,Education,Plac Politechniki 1,00-661 Warszawa,tel. 22 234 7211,-,https://www.pw.edu.pl/,"Plac Politechniki 1, 00-661 Warszawa",52.222213,21.0066552
+8,Akademia WSB,Education,Cieplaka 1c,41-300 D?browa Górnicza,tel. 32 295 93 00,info@wsb.edu.pl,https://wsb.edu.pl/,"Cieplaka 1c, 41-300 D?browa Górnicza",50.326453,19.191737
+9,H2 Wielkopolska,Education,Al. Niepodleg?o?ci 34,61-714 Pozna?,tel. 61 626 6248,-,https://h2wielkopolska.pl/,"Al. Niepodleg?o?ci 34, 61-714 Pozna?",48.337925,15.921685
+10,University of Silesia,Education,Bankowa 12,40-007 Katowice,-,-,https://us.edu.pl/,"Bankowa 12, 40-007 Katowice",50.2608163,19.0285342
+11,TÜV SÜD Polska Sp. z o.o.,Education,Podwale 17,00-252 Warszawa,tel. +48 22 696 43 96,tuv.pl@tuvsud.com,https://www.tuvsud.com/pl-pl/branze/energetyka/gospodarka-wodorowa/technologie-wodorowe,"Podwale 17, 00-252 Warszawa",52.2488418,21.0094129
+12,Kujawski Klaster Wodorowy,Hydrogen Valleys,Gagarina 7,87-100 Totu?,tel. 609 850 429,ctt@umk.pl,-,"Gagarina 7, 87-100 Totu?",53.019128,18.570376
+13,Greater Poland Hydrogen Valley,Hydrogen Valleys,al. Niepodleg?o?ci 34,61-714 Pozna?,-,-,-,"al. Niepodleg?o?ci 34, 61-714 Pozna?",48.337925,15.921685
+14,Silesian-Lesser Poland Hydrogen Valley Association,Hydrogen Valleys,Miko?owska 100,40-065 Katowice,tel. 32 757 48 75,biuro@h2dolina.eu,https://h2dolina.eu/,"Miko?owska 100, 40-065 Katowice",50.248268,18.999769
+15,Stowarzyszenie Podkarpacka Dolina Wodorowa,Hydrogen Valleys,Pozna?ska 2d,35-084 Rzeszów,biuro@dolinawodorowa.org,-,https://www.dolinawodorowa.org,"Pozna?ska 2d, 35-084 Rzeszów",50.017528,21.985267
+16,Stowarzyszenie Dolno?l?ska Dolina Wodorowa,Hydrogen Valleys,"Gen. W?adys?awa Sikorskiego 2-8 Budynek Cuprum Novum, pokój 310",53-659 Wroc?aw,kontakt@dolinah2.pl,https://dolinah2.pl,,"Gen. W?adys?awa Sikorskiego 2-8 Budynek Cuprum Novum, pokój 310, 53-659 Wroc?aw",,
+17,Klaster Wodorowy - Regionalna Izba Gospodarcza Pomorza,Hydrogen Valleys,Al. Grunwaldzka 82,80-244 Gda?sk,kontakt@klasterwodorowy.pl,https://klasterwodorowy.pl/,,"Al. Grunwaldzka 82, 80-244 Gda?sk",,
+18,ZKLASTER,Hydrogen Valleys,Daszy?skiego 54a,59-900 Zgorzelec,tel. +48 530 101 101,biuro@zklaster.org,https://zklaster.pl/,"Daszy?skiego 54a, 59-900 Zgorzelec",51.142599,15.00954
+19,Central Hydrogen Cluster named after ?aszczy?ski Brothers,Hydrogen Valleys,Sandomierska 105,25-324 Kielce,tel. 41 330 15 00,-,https://industria.eu/centralny-klaster-wodorowy/,"Sandomierska 105, 25-324 Kielce",50.8703036,20.6500925
+20,Projandspaw Sp. z o.o.,"Transmission, Storage",Drobiarzy 5,83-332 Mezowo,tel. +48 692 357 740,-,https://projandspaw.pl/,"Drobiarzy 5, 83-332 Mezowo",54.308062,18.269148
+21,Poltraf Sp. z o.o.,"Transmission, Storage",Bysewska 26c,80-298 Gda?sk,tel. 58 557 52 07,info@poltraf.com,https://poltraf.com/produkty/produkt/kategoria/wodor,"Bysewska 26c, 80-298 Gda?sk",48.1627552,17.1248263
+22,ERBUD SA,"Transmission, Storage",Franciszka Klimczaka 1,02?797 Warszawa,tel. +48 22 548 70 00,info@erbud.pl,https://www.erbud.pl/kontakt,"Franciszka Klimczaka 1, 02?797 Warszawa",52.1638832,21.082461
+23,HYDAC Sp. z o.o.,"Transmission, Storage",Reymonta 17,43-190 Miko?ów,tel. 32 326 29 00,info@hydac.com.pl,https://www.hydac.com/pl-pl/elektromobilnosc-hydac-stawia-na-rozwiazania-kompatybilne-z-wieloma-technologiami/zasilanie-elektromobilnosc,"Reymonta 17, 43-190 Miko?ów",50.176422,18.890181
+24,Górno?l?ski Instytut Technologiczny Sie? Badawcza ?ukasiewicz,"Transmission, Storage",Karola Miarki 12-14,44-100 Gliwice,-,-,https://git.lukasiewicz.gov.pl/,"Karola Miarki 12-14, 44-100 Gliwice",50.2945703,18.6578607
+25,Institute of Aviation,Application,al. Krakowska 110/114,02-256 Warszawa,tel. 22 846 00 11,ilot@ilot.lukasiewicz.gov.pl,https://ilot.lukasiewicz.gov.pl/,"al. Krakowska 110/114, 02-256 Warszawa",52.1777749,20.9461799
+26,Pozna? Institute of Technology - ?ukasiewicz Research Network,Application,Ewarysta Estkowskiego 6,61-755 Pozna?,tel. 61 850 48 90,office@pit.lukasiewicz.gov.pl,https://pit.lukasiewicz.gov.pl/,"Ewarysta Estkowskiego 6, 61-755 Pozna?",52.410498,16.940312
+27,MEITILL SOLUTIONS Sp z o.o.,Application,Stanis?awa Konarskiego 18c,44-100 Gliwice,tel. +48 798 549 506,biuro@meitill.com,https://meitill.com/,"Stanis?awa Konarskiego 18c, 44-100 Gliwice",50.29181525,18.682591085956112
+28,ROCKFIN Sp. z o.o.,Application,Pa?acowa 9,83-330 ?ukowo,tel. +48 58 728 29 00,biuro@rockfin.pl,https://rockfin.pl/oferta/hydrogen/,"Pa?acowa 9, 83-330 ?ukowo",47.488212450000006,14.994053392932592
+29,GÓRNO?L?SKI ZAK?AD OBS?UGI GAZOWNICTWA SP. Z O.O,Application,Pyskowicka 31,41-807 Zabrze,tel. 32 376 19 99,sekretariat@gzog.pl,https://gzog.pl/,"Pyskowicka 31, 41-807 Zabrze",50.351401499999994,18.753041165198034
+30,Katowice Special Economic Zone,Application,Wojewódzka 42,40-026 Katowice,tel. 32 251 07 36,ksse@ksse.com.pl,https://www.ksse.com.pl/,"Wojewódzka 42, 40-026 Katowice",50.25603495,19.02629909033203
+31,Instytut Technik Innowacyjnych EMAG Sie? Badawcza ?ukasiewicz,Application,Leopolda 31,40-189 Katowice,tel. 32 2007-700,emag@emag.lukasiewicz.gov.pl,https://emag.lukasiewicz.gov.pl/,"Leopolda 31, 40-189 Katowice",50.2722787,19.045743
+32,G?ówny Instytut Górnictwa Research Institute,Application,Plac Gwarków 1,40-166 Katowice,tel. 32-259-2000,-,https://gig.eu/,"Plac Gwarków 1, 40-166 Katowice",50.2701817,19.0266989
+33,KOMAG Institute of Mining Technology,Application,Pszczy?ska 37,44-101 Gliwice,tel. 32 2374100,info@komag.eu,https://komag.eu/,"Pszczy?ska 37, 44-101 Gliwice",50.297154,18.671436
+34,Institute of Energy and Fuel Processing Technology,Application,Zamkowa 1,41-803 Zabrze,tel. 32 271 00 41,office@itpe.pl,https://www.itpe.pl/,"Zamkowa 1, 41-803 Zabrze",50.3286215,18.82670216940955
+35,OIL AND GAS INSTITUTE National Research Institute,Application,Lubicz 25a,31-503 Kraków,tel. 12 421 00 33,office@inig.pl,https://www.inig.pl/,"Lubicz 25a, 31-503 Kraków",50.0651833,19.9539531
+36,Columbus Energy S.A.,Application,Jasnogórska 9 klatka B,31-358 Kraków,tel. 12 307 30 96,bok@columbusenergy.pl,https://columbusenergy.pl/,"Jasnogórska 9 klatka B, 31-358 Kraków",50.089597,19.891692
+37,STASTO Automation Sp. z o.o.,Application,?o?ny 32,02-815 Warszawa,tel. +48 (22) 3970755,poland@stasto.eu,https://www.stasto.eu/,"?o?ny 32, 02-815 Warszawa",52.1380266,21.026387045104897
+38,PAS Research Centre Energy Conversionand Renewable Resources,Application,Akademijna 27,05-110 Jab?onna,tel. 783 043 133,kontakt@kezo.pl,https://kezo.pl/,"Akademijna 27, 05-110 Jab?onna",52.378271,20.928863
+39,Polenergia Elektrociep?ownia Nowa Sarzyna Sp. z o.o.,Application,ks. J. Popie?uszki 2,37-310 Nowa Sarzyna,tel. 17 24 05 000,ens@ens.pl,http://www.ens.pl/,"ks. J. Popie?uszki 2, 37-310 Nowa Sarzyna",,
+40,2G Polska Sp. z o.o.,Application,Piekarska 86,43-300 Bielsko-Bia?a,-,-,-,"Piekarska 86, 43-300 Bielsko-Bia?a",49.832097,19.065788
+41,ZE PAK S.A.,Application,Kazimierska 45,62-510 Konin,tel. 63 247 30 00,zepak@zepak.com.pl,https://www.zepak.com.pl/,"Kazimierska 45, 62-510 Konin",52.300975,18.236655
+42,ML SYSTEM S.A.,Application,Zaczernie 190G,36-062 Zaczernie,tel. 17 778 82 66,biuro@mlsystem.pl,https://mlsystem.pl/,"Zaczernie 190G, 36-062 Zaczernie",50.107119499999996,22.00938854092675
+43,"Stowarzyszenie Grupy Przedsi?biorców Przemys?u Lotniczego ""Dolina Lotnicza""",Application,Fryderyka Szopena 51,35-959 Rzeszów,tel. 17 850 19 35,info@dolinalotnicza.pl,http://www.dolinalotnicza.pl/,"Fryderyka Szopena 51, 35-959 Rzeszów",50.0316472,22.0022937
+44,APVACUUM Sp. z o.o.,Application,Klonowa 24,62-002 Suchy Las,tel. +48 61 656 35 30,biuro@apvacuum.com,https://apvacuum.com/,"Klonowa 24, 62-002 Suchy Las",52.471394,16.8886498
+45,Endress+Hauser Polska sp. z o.o.,Application,Wo?owska 11,51-116 Wroc?aw,tel. +48 71 773 00 00,info.pl@endress.com,https://www.pl.endress.com/pl/endress-hauser-twoj-partner,"Wo?owska 11, 51-116 Wroc?aw",47.525282,14.360323
+46,Instytut Ceramiki i Materia?ów Budowlanych - Sie? Badawcza ?ukasiewicz,Application,Toszecka 99,44-100 Gliwice,tel. 32 270 18 01,info.gliwice@icimb.lukasiewicz.gov.pl,https://www.icimb.lukasiewicz.gov.pl/,"Toszecka 99, 44-100 Gliwice",50.316609,18.663901
+47,MEITILL Solutions,Application,Stanis?awa Konarskiego 18c,44-100 Gliwice,tel. 798 549 506,biuro@meitill.com,https://meitill.com/,"Stanis?awa Konarskiego 18c, 44-100 Gliwice",50.29181525,18.682591085956112
+48,ROCKFIN Sp. z o.o.,Application,Pa?acowa 9,83-330 ?ukowo,biuro@rockfin.pl,https://rockfin.pl/oferta/hydrogen/,,"Pa?acowa 9, 83-330 ?ukowo",47.488212450000006,14.994053392932592
+49,GÓRNO?L?SKI ZAK?AD OBS?UGI GAZOWNICTWA SP. Z O.O,Application,Pyskowicka 31,41-807 Zabrze,sekretariat@gzog.pl,https://gzog.pl/,,"Pyskowicka 31, 41-807 Zabrze",50.351401499999994,18.753041165198034
+50,Katowice Special Economic Zone,Application,Wojewódzka 42,40-026 Katowice,ksse@ksse.com.pl,https://www.ksse.com.pl/,,"Wojewódzka 42, 40-026 Katowice",50.25603495,19.02629909033203
+51,Instytut Technik Innowacyjnych EMAG Sie? Badawcza ?ukasiewicz,Application,Leopolda 31,40-189 Katowice,emag@emag.lukasiewicz.gov.pl,https://emag.lukasiewicz.gov.pl/,,"Leopolda 31, 40-189 Katowice",50.2722787,19.045743
+52,G?ówny Instytut Górnictwa Research Institute,Application,Plac Gwarków 1,40-166 Katowice,-,https://gig.eu/,,"Plac Gwarków 1, 40-166 Katowice",50.2701817,19.0266989
+53,KOMAG Institute of Mining Technology,Application,Pszczy?ska 37,44-101 Gliwice,info@komag.eu,https://komag.eu/,,"Pszczy?ska 37, 44-101 Gliwice",50.297154,18.671436
+54,Institute of Energy and Fuel Processing Technology,Application,Zamkowa 1,41-803 Zabrze,office@itpe.pl,https://www.itpe.pl/,,"Zamkowa 1, 41-803 Zabrze",50.3286215,18.82670216940955
+55,OIL AND GAS INSTITUTE National Research Institute,Application,Lubicz 25a,31-503 Kraków,office@inig.pl,https://www.inig.pl/,,"Lubicz 25a, 31-503 Kraków",50.0651833,19.9539531
+56,Columbus Energy S.A.,Application,Jasnogórska 9 klatka B,31-358 Kraków,bok@columbusenergy.pl,https://columbusenergy.pl/,,"Jasnogórska 9 klatka B, 31-358 Kraków",50.089597,19.891692
+57,STASTO Automation Sp. z o.o.,Application,?o?ny 32,02-815 Warszawa,poland@stasto.eu,https://www.stasto.eu/,,"?o?ny 32, 02-815 Warszawa",52.1380266,21.026387045104897
+58,PAS Research Centre Energy Conversionand Renewable Resources,Application,Akademijna 27,05-110 Jab?onna,kontakt@kezo.pl,https://kezo.pl/,,"Akademijna 27, 05-110 Jab?onna",52.378271,20.928863
+59,Polenergia Elektrociep?ownia Nowa Sarzyna Sp. z o.o.,Application,ks. J. Popie?uszki 2,37-310 Nowa Sarzyna,ens@ens.pl,http://www.ens.pl/,,"ks. J. Popie?uszki 2, 37-310 Nowa Sarzyna",,
+60,2G Polska Sp. z o.o.,Application,Piekarska 86,43-300 Bielsko-Bia?a,-,-,,"Piekarska 86, 43-300 Bielsko-Bia?a",49.832097,19.065788
+61,ZE PAK S.A.,Application,Kazimierska 45,62-510 Konin,zepak@zepak.com.pl,https://www.zepak.com.pl/,,"Kazimierska 45, 62-510 Konin",52.300975,18.236655
+62,ML SYSTEM S.A.,Application,Zaczernie 190G,36-062 Zaczernie,biuro@mlsystem.pl,https://mlsystem.pl/,,"Zaczernie 190G, 36-062 Zaczernie",50.107119499999996,22.00938854092675
+63,"Stowarzyszenie Grupy Przedsi?biorców Przemys?u Lotniczego ""Dolina Lotnicza""",Application,Fryderyka Szopena 51,35-959 Rzeszów,info@dolinalotnicza.pl,http://www.dolinalotnicza.pl/,,"Fryderyka Szopena 51, 35-959 Rzeszów",50.0316472,22.0022937
+64,APVACUUM Sp. z o.o.,Application,Klonowa 24,62-002 Suchy Las,biuro@apvacuum.com,https://apvacuum.com/,,"Klonowa 24, 62-002 Suchy Las",52.471394,16.8886498
+65,Endress+Hauser Polska sp. z o.o.,Application,Wo?owska 11,51-116 Wroc?aw,info.pl@endress.com,https://www.pl.endress.com/pl/endress-hauser-twoj-partner,,"Wo?owska 11, 51-116 Wroc?aw",47.525282,14.360323
+66,Instytut Ceramiki i Materia?ów Budowlanych - Sie? Badawcza ?ukasiewicz,Application,Toszecka 99,44-100 Gliwice,info.gliwice@icimb.lukasiewicz.gov.pl,https://www.icimb.lukasiewicz.gov.pl/,,"Toszecka 99, 44-100 Gliwice",50.316609,18.663901
+67,MEITILL Solutions,Application,Stanis?awa Konarskiego 18c,44-100 Gliwice,biuro@meitill.com,https://meitill.com/,,"Stanis?awa Konarskiego 18c, 44-100 Gliwice",50.29181525,18.682591085956112
+68,"The ?ukasiewicz Research Network - The Institute of Heavy Organic Synthesis ""Blachownia",Application,Energetyków 9,47-225 K?dzierzyn-Ko?le,info@icso.lukasiewicz.gov.pl,https://icso.com.pl/,,"Energetyków 9, 47-225 K?dzierzyn-Ko?le",50.907312,14.965924
+69,ABB Sp. z o.o.,Application,?aga?ska 1,04-713 Warszawa,-,https://new.abb.com/process-automation/pl/energy-industries/abb-wodor,,"?aga?ska 1, 04-713 Warszawa",52.238943,20.998065
+70,?ukasiewicz – Institute of Electrical Engineering (IEL),Application,Mieczys?awa Po?aryskiego 28,04-703 Warsaw,bok@iel.lukasiewicz.gov.pl,https://iel.lukasiewicz.gov.pl/,,"Mieczys?awa Po?aryskiego 28, 04-703 Warsaw",,
+71,ENERGOPROJEKT-KATOWICE SA,Application,Jesionowa 15,40-159 Katowice,epk@epk.com.pl,https://www.epk.com.pl,,"Jesionowa 15, 40-159 Katowice",50.2769148,19.028529
+72,ORLEN Po?udnie – Zak?ad Trzebinia,Production,Fabryczna 22,32-540 Trzebinia,-,-,,"Fabryczna 22, 32-540 Trzebinia",50.1622621,19.4458073
+73,INWEBIT Sp. z o.o.,Production,Sk?adowa 5b,61-888 Pozna?,biuro@inwebit.pl,https://inwebit.pl/pl/rewolucja-wodorowa,,"Sk?adowa 5b, 61-888 Pozna?",44.999335,7.682791
+74,Energotechnika-Energorozruch S.A.,Production,Kozielska 18,44-107 Gliwice,sekretariat@eesa.pl,https://www.eesa.pl/,,"Kozielska 18, 44-107 Gliwice",50.29851,18.655297
+75,SES Hydrogen Energy Sp. z o.o.,Production,al. Grunwaldzka 82,80-244 Gda?sk,-,https://seshydrogen.com/,,"al. Grunwaldzka 82, 80-244 Gda?sk",,
+76,UNIMOT S.A.,Production,?wierkla?ska 2a,47-120 Zawadzkie,ug@unimot.pl,https://www.unimot.pl/,,"?wierkla?ska 2a, 47-120 Zawadzkie",50.615847,18.465553
+77,Grupa Azoty S.A.,Production,Kwiatkowskiego 8,33-101 Tarnów,tarnow@grupaazoty.com,https://tarnow.grupaazoty.com/,,"Kwiatkowskiego 8, 33-101 Tarnów",50.014639,20.920814
+78,Hydrum Sp. z o.o.,Production,W?adys?awa Tryli?skiego 2/105,10-683 Olsztyn,-,https://www.hydrum.eu/,,"W?adys?awa Tryli?skiego 2/105, 10-683 Olsztyn",,
+79,PKN ORLEN S.A.,Production,Chemików 7,09-411 P?ock,-,https://www.orlen.pl/,,"Chemików 7, 09-411 P?ock",50.319223,18.239382
+80,JSW Nowe Projekty S.A.,Production,Paderewskiego 41,40-282 Katowice,office1@jswnoweprojekty.pl,https://www.jswinnowacje.pl/,,"Paderewskiego 41, 40-282 Katowice",50.253209,19.03955
+81,mPowerGreenTech,Production,Je?dziecka 1/11,01-461 Warszawa,info@mPowerGreenTech.com,https://mpowergreentech.com/,,"Je?dziecka 1/11, 01-461 Warszawa",52.2317641,21.005799675758887
+82,Simple H2,Production,1 Maja 191,25-646 Kielce,office@simpleh2.com,https://www.simpleh2.com/,,"1 Maja 191, 25-646 Kielce",50.8972184,20.6013866
+83,SBB ENERGY S.A.,Production,?owicka 1,45-324 Opole,biuro@sbbenergy.pl,https://sbbenergy.pl/,,"?owicka 1, 45-324 Opole",50.663224,17.92632
+84,CENTRAL FLUIDSYSTEMS Sp. z o.o.,Production,Graniczna 186,54-516 Wroc?aw,info@poland.swagelok.com,https://poland.swagelok.com/pl/,,"Graniczna 186, 54-516 Wroc?aw",51.1099553,16.8854572
+85,Dachs Polska sp. z o.o,Production,?ubinowa 59,87-100 Toru?,-,https://dachs.pl/,,"?ubinowa 59, 87-100 Toru?",48.189750849999996,16.305082270412562
+86,AIR PRODUCTS Sp. z o.o.,Production,Komitetu Obrony Robotników 48,02-146 Warszawa,-,https://www.airproducts.com.pl/,,"Komitetu Obrony Robotników 48, 02-146 Warszawa",52.1837838,20.9667251
+87,Hydrogen Refueling Station,Transport,Toru?ska 71,86-050 Solec Kujawski,-,-,,"Toru?ska 71, 86-050 Solec Kujawski",53.081939,18.258945
+88,Metropolis GZM,Transport,Barbary 21a,40-053 Katowice,kancelaria@metropoliagzm.pl,https://metropoliagzm.pl/,,"Barbary 21a, 40-053 Katowice",50.2490328,19.0065673
+89,Solaris Bus & Coach sp. z o.o.,Transport,Obornicka 46,62-005 Owi?ska,office@solarisbus.com,https://www.solarisbus.com/,,"Obornicka 46, 62-005 Owi?ska",52.546458,16.976102
+90,PESA Bydgoszcz SA,Transport,Zygmunta Augusta 11,85-082 Bydgoszcz,pesa@pesa.pl,https://pesa.pl/,,"Zygmunta Augusta 11, 85-082 Bydgoszcz",53.1366,17.991353
+91,Komunikacja Miejska P?ock Sp. z o.o.,Transport,Przemys?owa 17,09-400 P?ock,sekretariat@kmplock.eu,https://www.kmplock.eu/,,"Przemys?owa 17, 09-400 P?ock",48.058816,15.132959
+92,AUTOSAN SP. Z O.O.,Transport,Lipi?skiego 109,38-500 Sanok,info@autosan.pl,https://autosan.pl/,,"Lipi?skiego 109, 38-500 Sanok",49.547545,22.21778
+93,Hydrogen Refueling Station,Transport,Budowlanych 6,44-200 Rybnik,-,-,,"Budowlanych 6, 44-200 Rybnik",50.1012705,18.5334116
+94,Hydrogen Refueling Station - ORLEN,Transport,Murckowska 22,40-001 Katowice,-,-,,"Murckowska 22, 40-001 Katowice",50.2545181,19.0471037
+95,Centralny Klaster Wodorowy im. Braci ?aszczy?skich,Transport,Tango,Warszawa,-,-,,"Tango, Warszawa",52.1539303,21.0117539
+96,Hydrogen Refueling Station,Transport,Biskupi?ska 2,30-732 Kraków,-,-,,"Biskupi?ska 2, 30-732 Kraków",50.0546591,19.9344961
