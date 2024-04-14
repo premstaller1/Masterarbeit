@@ -1134,6 +1134,7 @@ EFCF
 Obgardihalde 2
 Luzern-Adligenswil, CH-6043
 Switzerland
+
 Project
 Member
 
@@ -1223,6 +1224,7 @@ Encevo S.A
 2, Domaine du Schlassgoard
 Esch-sur-Alzette, L-4327
 Luxembourg
+
 Project
 Member
 
@@ -1565,6 +1567,7 @@ TECHNOLOGY AND RELATED SCIENCES
 MEKELWEG - FACULTEIT MT 2
 Delft, 2628 CD
 Netherlands
+
 Project
 Member
 
@@ -2318,6 +2321,7 @@ Hydrogen Energy Association
 Lexden Road, West Bergholt, Colchester 108
 Essex, CO6 3BW
 United Kingdom
+
 EU National
 Association
 
@@ -2344,6 +2348,7 @@ Hydrogen UK
 RBS, PO Box 412, 62-63 Threadneedle St
 London, EC2R 8LA
 United Kingdom
+
 EU National
 Association
 

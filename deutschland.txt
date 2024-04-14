@@ -1,0 +1,1058 @@
+Carbon2Chem-Technikum
+
+Industrie
+
+thyssenkrupp AG
+
+eFarm
+
+Mobilität
+
+E-Farming GmbH & Co. KG
+
+Elektrolyseur am Energiepark der Stadt 
+Wunsiedel
+
+Industrie
+
+SWW Wunsiedel GmbH - Siemens AG
+
+Elektrolyseur von Hybridge
+
+Infrastruktur
+
+Amprion GmbH - Open Grid Europe GmbH
+
+ELEMENT EINS
+
+Industrie
+
+TenneT - Gasunie - ThyssenGas
+
+Standort
+
+Duisburg
+
+Nordfriesland
+
+Wunsiedel
+
+Lingen
+
+Ostfriesland
+
+Energiepark Bad Lauchstädt (GreenHydro-
+Chem)
+
+Industrie
+
+Terrawatt - Uniper - ONTRAS - DBI - VNG AG 
+
+Bad Lauchstädt
+
+Energiepark Mainz
+
+Infrastruktur
+
+Mainzer Stadtwerke AG, Linde AG, Siemens AG,  
+Hochschule RheinMain
+
+Energiepark Zerbst
+
+Industrie
+
+GETEC 
+
+Mainz
+
+Zerbst
+
+H2-Wyhlen
+
+HyBit
+
+HySynGas
+
+Industrie
+
+Energiedienst AG
+
+Grenzach-Wyhlen
+
+Industrie
+
+ArcelorMittal - Ingaver GmbH - wpd AG - EWE AG - Uni Bremen
+
+Bremen-Mittelsbüren 
+
+Industrie
+
+ARGE Netz - MAN Energy Solutions - Vattenfall GmbH
+
+Klimaneutrales Stadtquartier –  
+Neue Weststadt Esslingen
+
+Gebäude (GHD)
+
+Green Hydrogen Esslingen 
+
+MefCO2
+
+Industrie
+
+RWE Power AG - Mitsubishi Hitachi Power Systems Europe - Car-
+bon Recycling International - Universität Genua – Hydrogenics - 
+Chemie-Institut Sloweniens - Katalyse-Institut Cardiff - Universität 
+Duisburg-Essen - RWE Power AG
+
+Power-to-Gas Biogasbooster
+
+Industrie
+
+MicroPyros GmbH
+
+Power-to-Gas-Anlage Allendorf
+
+Industrie
+
+Viessmann Group 
+
+Power-to-Gas-Anlage der Windgas Haßfurt 
+GmbH 
+
+Infrastruktur
+
+Stadtwerk Haßfurt GmbH - Greenpeace Energy eG
+
+Haßfurt
+
+Power-to-Gas-Anlage Metelen
+
+Industrie
+
+Westnetz GmbH - Windpark Schöppinger Berg GmbH & Co KG
+
+Metelen
+
+Industrie
+
+TotalEnergies - Fraunhofer IMWS - Fraunhofer CBP - Sunfire GmbH 
+
+Leuna
+
+Brunsbüttel
+
+Esslingen
+
+Bergheim-Niederaußem
+
+Altenstadt
+
+Allendorf(Eder)
+
+Power-to-Methanol Anlage (Projekt: E-CO-
+2MET)
+
+Großelektrolyseanlage an dem Standort 
+Leuna (GreenHydroChem)
+
+Reallabors Westküste 100
+
+REFHYNE I / II
+
+Regelflexible Elektrolyse-Anlage der H&R 
+Ölwerke Schindler
+
+RH2-WKA
+
+Industrie
+
+Siemens AG - Linde AG - Fraunhofer IMWS 
+
+Industrie
+
+Industrie
+
+Raffinerie Heide GmbH - EDF Deutschland GmbH - Holcim 
+Deutschland - OGE - Ørsted - Stadtwerke Heide - Thüga 
+
+Shell plc - Shell Energy and Chemicals Park Rheinland - ITM Power 
+- SINTEF - Sphera Solutions - Element Energy Ltd.
+
+Wesseling
+
+Industrie
+
+H&R Ölwerke Schindler GmbH
+
+Infrastruktur
+
+WIND-projekt Ingenieur- und Projektentwicklungsgesellschaft 
+mbH
+
+STORE&GO-Projekt WindGas Falkenhagen
+
+Infrastruktur
+
+Uniper
+
+Grüner Wasserstoff für grünen Stahl Duisburg
+
+Industrie
+
+STEAG, thyssenkrupp Steel, thyssenkrupp Uhde  
+Chlorine Engineers
+
+Wind2Gas Energy
+
+Mobilität
+
+Wind to Gas Energy GmbH & Co. KG
+
+Wasserstoff-Leistungszentrum  
+Norddeutschland
+
+Industrie
+
+Apex Energy Teterow GmbH - 2G Energy
+
+WindGas Hamburg - Pilotanlage Hamburg
+
+Industrie
+
+29
+
+Windgas Haurup 
+
+Infrastruktur
+
+Uniper Energy Storage GmbH-Hydrogenics GmbH, Greenerity 
+GmbH, Deutsches Zentrum für Luft- und Raumfahrt e.V.,  
+Fraunhofer IWES
+
+Energie Des Nordens Gmbh & Co. Kg, Open Grid Europe GmbH, 
+Gasunie Deutschland Transport Services GmbH, Green Planet 
+Energy eG, DKB AG
+
+Windwasserstoff Salzgitter
+
+Industrie
+
+Salzgitter Flachstahl GmbH, Linde AG, Avacon AG
+
+WOMBAT - AUDI-e-gas-Anlage
+
+Mobilität
+
+Audi
+
+E2Fuel
+
+Forschung
+
+MAN Energy Solutions SE - Siemens Gas and Power - Stadtwerk 
+Haßfurt GmbH
+
+Green Wilhelmshaven
+
+Industrie
+
+Uniper SE
+
+Wilhelmshaven
+
+Leuna
+
+Heide
+
+Hamburg
+
+Grapzow
+
+Falkenhagen
+
+Duisburg-Walsum 
+
+Brunsbüttel
+
+Rostock-Laage
+
+Hamburg-Reitbrook
+
+Haurup
+
+Salzgitter
+
+Werlte
+
+Haßfurt
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+30
+
+31
+
+32
+
+33
+
+Transport & Speicherung
+
+Projekt
+
+Green Crane
+
+Sektor
+
+Betreiber/Projektierer
+
+Standort
+
+Infrastruktur
+
+Enagas - Naturg - Vopak - Hydrogenious LOHC Technologies
+
+Lingen
+
+Green Octopus Mitteldeutschland
+
+Infrastruktur
+
+ONTRAS - VNG Gasspeicher GmbH
+
+Mitteldeutschland
+
+HH-WIN
+
+HyPerLink
+
+mosaHYc
+
+H2Cast Etzel
+
+Infrastruktur
+
+Gasnetz Hamburg GmbH - Shell Deutschland GmbH - HHLA Ham-
+burger Hafen und Logistik AG
+
+Hamburg
+
+Infrastruktur
+
+Gasunie
+
+Infrastruktur
+
+Creos Deutschland GmbH - GRTgaz Deutschland GmbH
+
+Völklingen und Perl
+
+Infrastruktur
+
+STORAG ETZEL - DEEP.KBB - DLR - HARTMANN Valves - SOCON - 
+Clausthal University of Technology
+
+Etzel
+
+Wasserstoffspeicher Krummhörn
+
+Infrastruktur
+
+Uniper Energy Storage GmbH
+
+Krummhörn
+
+Standort
+
+Bayern und Baden-Würt-
+temberg
+
+Region Kirchheim-Teck
+
+Eisenhüttenstadt - 
+Bremen
+
+Hamburg
+
+Hamburg
+
+Dresden
+
+Hamburg
+
+Duisburg
+
+Ludwigshafen
+
+Hamburg
+
+Dithmarschen
+
+Aachen
+
+Weinheim
+
+Duisburg
+
+Bielefeld
+
+Hamburg
+
+Stade
+
+München
+
+Wörth/deutschlandweit
+
+Anwendung
+
+Projekt
+
+Bosch Power Units
+
+Sektor
+
+Betreiber/Projektierer
+
+Industrie
+
+Robert Bosch GmbH
+
+Brennstoffzellen Gigafactory
+
+Mobilität
+
+cellcentric GmbH & Co. KG
+
+DRIBE2
+
+H2HADAG
+
+H2LOAD
+
+H2-SARA
+
+Industrie
+
+ArcelorMittal 
+
+Mobilität
+
+Mobilität
+
+HADAG Seetouristik und Fährdienst AG 
+
+Hamburger Hafen und Logistik AG
+
+Industrie
+
+Sunfire - Voith - WätaS - Vitesco Technologies
+
+H2 Schubboot (H2SB)
+
+Mobilität
+
+GreenPlug
+
+Industrie
+
+thyssenkrupp Steel Europe AG - AIR LIQUIDE -  
+VDEh-Betriebsforschungsinstitut GmbH
+
+Industrie
+
+Paul Wurth S.A. - Saarstahl AG - AG der Dillinger Hüttenwerke 
+
+Dillingen
+
+Hydrogen Port Applications (HyPA)
+
+Mobilität
+
+ Hamburg Port Authority 
+
+Industrie
+
+BASF
+
+Industrie
+
+Holcim Deutschland - Hynamics Deutschland - Ørsted Wind
+Power Germany - Raffinerie Heide
+
+Industrie
+
+Neuman & Esser
+
+Freudenberg Performance Materials
+
+Mobilität
+
+Mobilität
+
+Mobilität
+
+ElringKlinger
+
+Dettingen an der Erms
+
+H2 MOBILITY Deutschland GmbH & Co. KG - Shell - Air Liquide 
+
+H2Stahl
+
+H2Syngas
+
+Hy4Chem
+
+Hyscale100
+
+MAPEVA
+
+NextGadila
+
+NextGen HD-Stack
+
+SENECA
+
+tkH2Steel
+
+Industrie
+
+thyssenkrupp Steel Europe AG
+
+Innovationspark Sektorenkopplung
+
+WIPLiN
+
+Mobilität
+
+Mobilität
+
+Stadtwerke Bielefeld
+
+Airbus Operations
+
+DOW Stade - Green MeOH
+
+Industrie
+
+Dow Deutschland Anlagengesellschaft mbH
+
+BMW Produkt
+
+Pegasus
+
+Mobilität
+
+Mobilität
+
+BMW Group
+
+Daimler Truck
+
+Elektrolysetest- und -versuchsplattform ELP  
+(Projekt Hy2Chem)
+
+Industrie
+
+Fraunhofer IMWS und Fraunhofer CBP
+
+Leuna
+
+Hyways for Future
+
+Mobilität
+
+EWE AG - swb
+
+Forschung & Entwicklung
+
+Projekt
+
+Sektor
+
+Betreiber/Projektierer
+
+Hydrogen Lab Görlitz
+
+Forschung
+
+Fraunhofer-Gesellschaft 
+
+TrHy - THE HYDROGEN PROVING AREA
+
+Mobilität
+
+ZBT - Zentrum für Brennstoffzellen-Technik GmbH -  
+Hüttenwerke Krupp Mannesmann - Rheinmetall
+
+Bremerhaven und 
+Cuxhaven
+
+Standort
+
+Görlitz
+
+Duisburg
+
+Wasserstoffzentrum HIC  
+(von Netzwerk HZwo)"
+
+H2HoWi
+
+ PtX Lab Lausitz
+
+Forschung
+
+TU Chemnitz - Fraunhofer-Instituten IWU und ENAS 
+
+Chemnitz
+
+Gebäude (GHD)
+
+E.ON - Westnetz GmbH
+
+Forschung
+
+PtX Lab Lausitz
+
+Holzwickede
+
+Cottbus
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+Integrierte Projekte
+
+Projekt
+
+BayH2
+
+Sektor
+
+Betreiber/Projektierer
+
+Industrie
+
+PRIMUS Energie - Vattenfall - BAYERNOIL -  
+Bayerische Staatsforsten
+
+Standort
+
+Neustadt an der Donau
+
+ChemCH2ange
+
+Industrie
+
+INEOS - Currenta
+
+Köln
+
+Green Hydrogen @ Blue Danube
+
+Industrie, 
+Mobilität
+
+Hydrogenious LOHC Technologies GmbH - Bayernoil - Bosch - MAN 
+Energy Solutions - Clariant 
+
+Neustadt an der Donau
+
+Green MeOH 
+
+GreenMotionSteel
+
+H2goesRail
+
+Industrie
+
+Dow Deutschland Anlagengesellschaft mbH
+
+Mobilität
+
+Mobilität
+
+Air Liquide
+
+Deutsche Bahn AG - Siemens Mobility GmbH - DB Energie GmbH - 
+DB Regio AG
+
+H2H 
+
+Industrie
+
+ArcelorMittal 
+
+Hamburg Green Hydrogen Hub
+
+Industrie
+
+Shell - Mitsubishi Heavy Industries - Hamburger Energiewerke - 
+Vattenfall
+
+Stade
+
+Duisburg
+
+Tübingen
+
+Hamburg
+
+Hamburg
+
+HyTechHafen Rostock
+
+Industrie,  
+Mobilität,  
+Gebäude (GHD)
+
+ROSTOCK PORT GmbH - KNG - WIND-projekt - IWEN - Stadtwerke 
+Rostock - 50Hertz - RWE 
+
+Rostock
+
+Lingen Green Hydrogen Projekt ( LGH2 )
+
+Industrie
+
+Ørsted - bp Europa SE
+
+RHYME Bavaria (Renewable Hydrogen and 
+Methanol)
+
+Industrie
+
+Wacker Chemie AG - Bayerische Forschungsallianz GmbH -  
+bayernets GmbH - SFC energy AG - Renewable Hydrogen Coalition 
+- CropEnergies AG - Rohrdorfer Zement
+
+Total Deutschland GmbH - Linde AG- Siemens Energy AG -  
+ITM Linde Electrolysis GmbH
+
+Leipziger Versorgungs- und Verkehrsgesellschaft mbH - ONTRAS 
+Gastransport GmbH - EDL Anlagenbau Gesellschaft mbH
+
+bp plc - Evonik Industries AG - Nowega GmbH - Open Grid Europe 
+GmbH - RWE Generation SE - Thyssengas GmbH
+
+Lingen
+
+Burghausen
+
+Leuna
+
+Leipzig
+
+Lingen
+
+Industrie,  
+Infrastruktur
+
+Industrie,  
+Infrastruktur
+
+Industrie,  
+Infrastruktur
+
+Industrie, 
+Mobilität,  
+Infrastruktur
+
+Industrie, 
+Mobilität,  
+Infrastruktur
+
+Green Hydrogen Hub
+
+LHyVE - Leipzig Hydrogen Value Chain for 
+Europe
+
+GET H2 Nukleus
+
+AquaVentus
+
+85
+
+doing hydrogen
+
+Concrete Chemicals Scale-up  
+(Verbunden mit doing Hydrogen)
+
+H2.Ruhr
+
+H2Rivers
+
+GASCADE Gastransport GmbH - Gasunie - RWE AG - Shell plc
+
+Helgoland
+
+CEMEX Deutschland AG- ENERTRAG AG - GASCADE Gastransport 
+GmbH - ONTRAS Gastransport GmbH - APEX Energy Teterow 
+GmbH
+
+in Mecklenburg-Vorpom-
+mern, Brandenburg und 
+Sachsen-Anhalt
+
+Industrie
+
+CEMEX - ENERTRAG
+
+Rüdersdorf
+
+Industrie,  
+Infrastruktur
+
+E.ON - Westenergie AG, Enel, Iberdrola, ABB und SAP
+
+Duisburg und Dortmund 
+
+HydroHub Fenne
+
+Industrie
+
+Siemens Energy - STEAG
+
+Mobilität
+
+HY. Waiblingen GmbH & Co. KG
+
+Waiblingen
+
+Völklingen
+
+Norddeutsches Reallabor ( NRL )
+
+Infrastruktur
+
+Konsortialführer: Competence Center für Erneuerbare Energien 
+und EnergieEffizienz (CC4E) der Hochschule für Angewandte 
+Wissenschaften Hamburg
+
+Hamburg, Schleswig- 
+Holstein und Mecklen-
+burg-Vorpommern
+
+Referenzkraftwerk Lausitz ( RefLau )
+
+Industrie
+
+Zweckverband Industriepark Schwarze Pumpe
+
+Clean Hydrogen Coastline
+
+Industrie, 
+Mobilität,  
+Infrastruktur
+
+ArcelorMittal Bremen GmbH - EWE AG- FAUN Umwelttechnik 
+GmbH & Co. KG - Gasunie Deutschland Transport Services GmbH - 
+swb AG - TenneT TSO GmbH
+
+BASF Elektrolyseur beim Carbon Management
+
+Industrie
+
+Siemens Energy - BASF
+
+BlueHyNow
+
+H2ercules-Initiative
+
+Industrie,  
+Infrastruktur
+
+Industrie,  
+Infrastruktur
+
+Wintershell Dea AG - Nord-West Oelleitung (NWO)
+
+RWE Power AG - OGE 
+
+Lausitz 
+
+Bremen
+
+Ludwigshafen
+
+Wilhelmshaven
+
+Lingen
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+
