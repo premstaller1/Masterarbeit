@@ -1,0 +1,268 @@
+---
+title: "DiTest_descritpive"
+output: html_document
+date: "2024-05-04"
+---
+
+#New line is being added with CRTL+ALT+I
+
+Here's a description of each function, along with their variables, expected outcomes, and expected inputs:
+
+bilatDistance(lo, la):
+
+  Purpose: This function calculates the bilateral distance in kilometers between two locations specified by their longitudes (lo) and latitudes (la).
+  Variables:
+  radj: A constant value of 6371, representing the radius of the Earth in kilometers.
+  la and lo: Input vectors containing latitudes and longitudes in decimal degrees.
+  Expected Outcome: A vector of bilateral distances between each pair of locations.
+  Expected Input: Two vectors of equal length, containing the latitudes and longitudes of the locations.
+
+convertXY(lat, lon):
+
+  Purpose: This function converts latitude and longitude coordinates to x and y coordinates in a Cartesian coordinate system.
+  Variables:
+  R: The radius of the Earth in meters (6371000 meters).
+  lat and lon: Input vectors containing latitudes and longitudes in decimal degrees.
+  Expected Outcome: An object containing two vectors, x and y, representing the Cartesian coordinates.
+  Expected Input: Two vectors of equal length, containing the latitudes and longitudes of the locations.
+  
+calcDi(y, x, fun):
+
+  Purpose: This function calculates a set of Di values based on bilateral distances and a specified function (fun).
+  Variables:
+  y and x: Input vectors containing latitudes and longitudes in decimal degrees.
+  fun: A character string specifying the function to use ("invert" or "expo").
+  Expected Outcome: A vector of Di values.
+  Expected Input: Two vectors of equal length, containing the latitudes and longitudes of the locations, and a character string specifying the function.
+
+getPercentileGlobalConfidenceBand(KDEValues, esp, maxNumb, numIter, startPercentile, percentileStep, upperOrLower):
+
+  Purpose: This function calculates the global confidence band for a set of KDE (Kernel Density Estimation) values.
+  Variables:
+  KDEValues: A matrix containing the KDE values for multiple iterations.
+  esp: The number of spatial units.
+  maxNumb: The maximum number of iterations that should exceed the threshold.
+  numIter: The total number of iterations.
+  startPercentile: The starting percentile for the confidence band calculation.
+  percentileStep: The step size for percentile increments or decrements.
+  upperOrLower: A character string indicating whether to calculate the upper or lower bound.
+  Expected Outcome: An object containing vectors bound and percentile, representing the calculated bounds and corresponding percentiles.
+  Expected Input: A matrix of KDE values, and several parameters specifying the confidence band calculation.
+
+globalConfidenceBand(KDEValues, esp, thresh):
+
+  Purpose: This function calculates the global confidence band for a set of KDE values, including both upper and lower bounds.
+  Variables:
+  KDEValues: A matrix containing the KDE values for multiple iterations.
+  esp: The number of spatial units.
+  thresh: The threshold value used to determine the maximum number of iterations.
+  Expected Outcome: An object containing vectors lowerBound, upperBound, and KDEValues, representing the lower and upper bounds of the confidence band, and the original KDE values.
+  Expected Input: A matrix of KDE values and parameters specifying the confidence band calculation.
+
+localConfidenceBand(KDEValues, esp):
+
+  Purpose: This function calculates the local confidence band for a set of KDE values.
+  Variables:
+  KDEValues: A matrix containing the KDE values for multiple iterations.
+  esp: The number of spatial units.
+  Expected Outcome: An object containing vectors lowerBound and upperBound, representing the lower and upper bounds of the local confidence band.
+  Expected Input: A matrix of KDE values and the number of spatial units.
+
+globalVaues(kdeObs, kdeBench):
+
+  Purpose: This function calculates global values of dispersion and concentration by comparing the KDE of observed data (kdeObs) to a benchmark (kdeBench).
+  Variables:
+  kdeObs: An object containing the KDE values and x-coordinates of the observed data.
+  kdeBench: An object containing the KDE values and x-coordinates of the benchmark data.
+  Expected Outcome: An object containing values for theta (concentration), omega (dispersion), delta (their difference), and myMean (the mean of the benchmark data).
+  Expected Input: Two objects representing the KDE and x-coordinates of observed and benchmark data.
+
+```{r}
+
+bilatDistance <- function(lo, la){ # gives correctly computed bilateral distancs in km
+  radj=6371
+  la <- 2 * pi * la/360
+  lo <- 2 * pi * lo/360
+  coslat <- cos(la)
+  sinlat <- sin(la)
+  dvect <- sinlat %o% sinlat + (coslat %o% coslat) * cos(-outer(lo,  lo, "-"))
+  dvect <- dvect[lower.tri(dvect)]
+  dvect <- ifelse(dvect > 1, 1, dvect)
+  dvect <- radj * acos(dvect)
+  return(dvect)
+}
+ 
+convertXY<- function(lat,lon){
+  R=6371000
+  x = R * (cos(9000-lat)* cos(lon))
+  y = R * (cos(9000-lat) *sin(lon))
+  ergeb=objects();
+  ergeb$x=x
+  ergeb$y=y
+   
+  return (ergeb)
+}
+
+calcDi<- function(y,x, fun){
+  thresh=1 # min distance 
+  dist=bilatDistance(y,x)# calculaution of bilateral distances according to McSpatial
+  dist[dist<thresh] <-thresh 
+  Di=rep(0,length(y))
+  pos=1
+  i=1
+  for(i in 1:(length(Di)-1)){ # calculate Di vlaues
+    upTo=length(Di)-i # length of array
+    #print(paste("Von ",pos,"um",upTo, sep=" " ))
+    for(z in 1:upTo){ # different possible functions to play with --> use invert
+      if(fun=="invert" ){
+        val=1/(dist[pos]*(length(Di)-1));
+      }
+      if(fun=="expo"){
+        val=exp(-0.05*dist[pos])
+        val=val/(length(Di)-1)
+      }
+      
+      Di[i]=Di[i]+val
+      mypos=i+z
+      Di[mypos]=Di[mypos]+val
+      # print(paste("Updaze bei",i,"und",mypos, sep=" " ))
+      #print(pos)
+      pos=pos+1
+      
+    }
+    
+  }
+  return (Di)
+}
+
+
+getPercentileGlobalConfidenceBand <- function (KDEValues,esp, maxNumb,numIter, startPercentile, percentileStep, upperOrLower){
+  counter=0
+  observedNumb=maxNumb+1
+  while(observedNumb>maxNumb){
+    bound=vector();
+    counter=counter+1
+    for(i in 1:esp){
+      if(upperOrLower=="lower"){
+        percentile=startPercentile-(counter*percentileStep)
+      }
+      else{
+        percentile=startPercentile+(counter*percentileStep)
+      } 
+      quantiles <- quantile(KDEValues[,i], percentile)  
+      bound=append(bound,quantiles[[1]])
+    }
+    observedNumb=0
+    for(i in 1:numIter){# WIe oft wird der Bound getroffen
+      iter=KDEValues[i,]
+      if(upperOrLower=="lower"){
+        if(sum(iter<bound)>=1){ # Bound wurden an mindestens einer Stelle getroffen
+          observedNumb=observedNumb+1
+        }
+      }
+      else{
+        if(sum(iter>bound)>=1){ # Bound wurden an mindestens einer Stelle getroffen
+          observedNumb=observedNumb+1
+        }
+      }
+    }
+    print(paste("Percenetik:",percentile, " Treffer: ",observedNumb))
+  }
+  ergeb=objects();
+  ergeb$bound=bound;
+  ergeb$percentile=percentile
+  return (ergeb)
+}
+globalConfidenceBand <- function (KDEValues,esp, thresh){
+  numIter=length(KDEValues[,1])
+  maxNumb=(thresh/100)*numIter
+  print(maxNumb)
+  
+  #Calclulation of lower Bound at 1 % Steps
+  lowerBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, 0.05, 0.01, "lower")
+  #Calclulation of lower Bound at 0.1 % Steps
+  start=lowerBoundCalc$percentile+0.01 # set last position
+  lowerBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, start, 0.001, "lower")
+  
+  #Calclulation of upper Bound at 1 % Steps
+  upperBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, 0.95, 0.01, "upper")
+  #Calclulation of upper Bound at 0.1 % Steps
+  start=upperBoundCalc$percentile-0.01 # set last position
+  upperBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, start, 0.001, "upper")
+  
+  ergeb=objects(); # ergeb means result in German ;)
+  ergeb$lowerBound=lowerBoundCalc$bound
+  ergeb$upperBound=upperBoundCalc$bound
+  ergeb$KDEValues=KDEValues
+  return (ergeb)
+}  
+
+
+
+# calculate local confidence Bands ( not used in Paper)
+localConfidenceBand <- function (KDEValues,esp){
+  lowerBound=vector();
+  upperBound=vector();
+  for(i in 1:esp){
+    quantiles <- quantile(KDEValues[,i], c(.05,.95))  
+    lowerBound=append(lowerBound,quantiles[[1]])
+    upperBound=append(upperBound,quantiles[[2]])
+  }
+  ergeb=objects();
+  ergeb$lowerBound=lowerBound
+  ergeb$upperBound=upperBound
+  return (ergeb)
+}
+
+#####  Global Values  ###################################################################################################
+
+# function is used to calculate global dispersion or concentration 
+# needs the calculated Di values of the observes industry and the bechmark
+globalVaues<- function (kdeObs, kdeBench){
+  #calculate the median value of Benchmark
+  meanIntegral=0
+  i=1
+  while (meanIntegral<0.5){
+    maxb=max(kdeBench$y[i],kdeBench$y[(i+1)])
+    d=abs(kdeBench$y[i]-kdeBench$y[(i+1)])
+    c=kdeBench$x[(i+1)]-kdeBench$x[i]
+    integral=maxb*c-(0.5*(c*d))
+    meanIntegral=meanIntegral+integral
+    i=i+1
+  }
+  myMean=kdeBench$x[i]
+  omega=0
+  theta=0
+  print(myMean)
+  for(i in 1:(length(kdeObs$y)-1)){
+    
+    if(kdeObs$y[i]>kdeBench$y[i] && kdeObs$y[(i+1)]>kdeBench$y[(i+1)]){
+      maxbObs=max(kdeObs$y[i],kdeObs$y[(i+1)])
+      maxbBench=max(kdeBench$y[i],kdeBench$y[(i+1)])
+      dObs=abs(kdeObs$y[i]-kdeObs$y[(i+1)])
+      dBench=abs(kdeBench$y[i]-kdeBench$y[(i+1)])
+      c=kdeObs$x[(i+1)]-kdeObs$x[i]
+      integralObs=maxbObs*c-(0.5*(c*dObs))
+      integralBench=maxbBench*c-(0.5*(c*dBench))
+      integral=integralObs-integralBench
+      if(kdeBench$x[i]< myMean){#Dispersion      
+        omega=omega+integral
+        #print(paste("Dispersion an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
+      }
+      else{#Concentration
+        theta=theta+integral
+        #print(paste("Konzentration an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
+      }
+    }
+  }
+  ergeb=objects();
+  ergeb$theta=theta
+  ergeb$omega=omega
+  ergeb$delta=theta-omega
+  ergeb$myMean=myMean
+  
+  return (ergeb)
+}
+
+```
+ 
