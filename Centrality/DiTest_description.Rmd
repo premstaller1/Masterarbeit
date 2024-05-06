@@ -266,3 +266,120 @@ globalVaues<- function (kdeObs, kdeBench){
 
 ```
  
+#To make the provided code run with your benchmark and industry datasets that have longitude and latitude data points, you need to perform the following steps:
+
+
+Prepare Your Data:
+
+Make sure your benchmark and industry datasets are in data frames or matrices, with columns named "longitude" and "latitude" (or similar) containing the longitude and latitude values, respectively.
+
+Load the Code:
+
+Copy and paste the provided code into an R script file (e.g., "spatial_analysis.R") or directly into your R console.
+
+Set Up Input Data:
+
+Assign your benchmark and industry datasets to variables in your R environment. For example:
+benchmark_data <- your_benchmark_dataset  # Replace with your dataset
+industry_data <- your_industry_dataset     # Replace with your dataset
+
+Convert Coordinates (Optional):
+
+If you want to convert the longitude and latitude coordinates to x and y coordinates using the convertXY function, you can do so:
+benchmark_xy <- convertXY(benchmark_data$latitude, benchmark_data$longitude)
+industry_xy <- convertXY(industry_data$latitude, industry_data$longitude)
+
+Calculate Bilateral Distances:
+
+Use the bilatDistance function to calculate the bilateral distances between locations in your datasets:
+benchmark_dist <- bilatDistance(benchmark_data$longitude, benchmark_data$latitude)
+industry_dist <- bilatDistance(industry_data$longitude, industry_data$latitude)
+
+Calculate Di Values:
+
+Use the calcDi function to calculate the Di values for your datasets. You can choose the function type ("invert" or "expo") based on your requirements:
+benchmark_Di <- calcDi(benchmark_data$latitude, benchmark_data$longitude, fun = "invert")
+industry_Di <- calcDi(industry_data$latitude, industry_data$longitude, fun = "invert")
+
+Calculate Global Values:
+
+Use the globalVaues function to calculate global values of dispersion and concentration by comparing the KDE of your industry data to the benchmark data:
+global_vals <- globalVaues(kdeObs = industry_Di, kdeBench = benchmark_Di)
+
+Calculate Global Confidence Band (Optional):
+
+If you want to calculate the global confidence band for your KDE values, you can use the globalConfidenceBand function:
+global_band <- globalConfidenceBand(KDEValues = industry_Di, esp = <number of spatial units>, thresh = 0.9)
+
+Analyze Results:
+
+After executing the code, you will have various results, including bilateral distances, Di values, global values of dispersion and concentration, and (optionally) global confidence bands. Analyze these results based on your specific research questions or objectives.
+
+#More details for the steps of comparison:
+
+Step 7: Calculate Global Values:
+
+In this step, you use the globalVaues function to calculate global values of dispersion and concentration by comparing the Kernel Density Estimation (KDE) of your industry data to the benchmark data.
+
+Here's how the globalVaues function works:
+
+It takes two input arguments: kdeObs and kdeBench.
+
+kdeObs: This is the KDE of your industry data, represented by the Di values calculated in step 6.
+kdeBench: This is the KDE of your benchmark data, also represented by the Di values.
+The function first calculates the median value of the benchmark KDE. This median value is used as a reference point for comparing the observed and benchmark data.
+
+Next, the function iterates through the KDE values of both the observed and benchmark data. For each pair of values, it checks if the observed KDE value is greater than the benchmark KDE value.
+
+If the observed KDE value is greater, it calculates the integral of the difference between the observed and benchmark KDE curves for that specific interval.
+
+Depending on whether the current x-coordinate (location) is to the left or right of the median value, it accumulates the integral values into two separate variables: omega and theta.
+
+omega accumulates the integral values when the x-coordinate is to the left of the median, indicating dispersion.
+theta accumulates the integral values when the x-coordinate is to the right of the median, indicating concentration.
+Finally, the function returns an object with the following values:
+
+theta: The sum of integral values indicating concentration.
+omega: The sum of integral values indicating dispersion.
+delta: The difference between theta and omega, representing the net concentration or dispersion.
+myMean: The median value of the benchmark KDE.
+Example usage:
+
+global_vals <- globalVaues(kdeObs = industry_Di, kdeBench = benchmark_Di)
+After running this code, you can access the calculated global values:
+
+global_vals$theta
+global_vals$omega
+global_vals$delta
+global_vals$myMean
+Step 8: Calculate Global Confidence Band (Optional):
+
+In this optional step, you use the globalConfidenceBand function to calculate the global confidence band for your KDE values. This band provides an estimate of the variability or uncertainty in your KDE estimates.
+
+Here's how the globalConfidenceBand function works:
+
+It takes three input arguments: KDEValues, esp, and thresh.
+
+KDEValues: This is a matrix containing the KDE values for multiple iterations or simulations. Each column represents a separate iteration.
+esp: The number of spatial units or regions in your data.
+thresh: A threshold value used to determine the maximum number of iterations that should exceed a certain threshold.
+The function first calculates the maximum number of iterations (maxNumb) that should exceed the threshold. This is calculated as (thresh/100) * numIter, where numIter is the total number of iterations.
+
+Next, it calls the getPercentileGlobalConfidenceBand function (described in the previous response) to calculate the lower and upper bounds of the global confidence band.
+
+The lower bound is calculated using percentiles starting from 0.05 and decreasing in steps of 0.01 and 0.001.
+The upper bound is calculated using percentiles starting from 0.95 and increasing in steps of 0.01 and 0.001.
+Finally, the function returns an object with the following values:
+
+lowerBound: The lower bound of the global confidence band.
+upperBound: The upper bound of the global confidence band.
+KDEValues: The original KDE values used for the calculation.
+Example usage:
+
+global_band <- globalConfidenceBand(KDEValues = industry_Di, esp = <number of spatial units>, thresh = 0.9)
+After running this code, you can access the calculated global confidence band:
+
+global_band$lowerBound
+global_band$upperBound
+
+Remember that step 8 is optional and may not be necessary for all analyses. The global confidence band provides a measure of uncertainty or variability in your KDE estimates, which can be useful for assessing the robustness of your results.
