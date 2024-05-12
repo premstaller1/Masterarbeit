@@ -78,6 +78,11 @@ globalVaues(kdeObs, kdeBench):
   Expected Input: Two objects representing the KDE and x-coordinates of observed and benchmark data.
 
 ```{r}
+# Load required packages
+library(readxl)
+library(sp)
+library(raster)
+
 
 bilatDistance <- function(lo, la){ # gives correctly computed bilateral distancs in km
   radj=6371
@@ -173,6 +178,7 @@ getPercentileGlobalConfidenceBand <- function (KDEValues,esp, maxNumb,numIter, s
   ergeb$percentile=percentile
   return (ergeb)
 }
+
 globalConfidenceBand <- function (KDEValues,esp, thresh){
   numIter=length(KDEValues[,1])
   maxNumb=(thresh/100)*numIter
@@ -218,7 +224,7 @@ localConfidenceBand <- function (KDEValues,esp){
 
 # function is used to calculate global dispersion or concentration 
 # needs the calculated Di values of the observes industry and the bechmark
-globalVaues<- function (kdeObs, kdeBench){
+globalValues<- function (kdeObs, kdeBench){
   #calculate the median value of Benchmark
   meanIntegral=0
   i=1
@@ -383,3 +389,112 @@ global_band$lowerBound
 global_band$upperBound
 
 Remember that step 8 is optional and may not be necessary for all analyses. The global confidence band provides a measure of uncertainty or variability in your KDE estimates, which can be useful for assessing the robustness of your results.
+
+
+```{r}
+# Load required packages
+#install.packages("McSpatial")
+#install.packages("fields")
+library(readxl)
+library(ggplot2)
+library(gridExtra)
+library(MASS)
+library(ks)
+library(stats) # For Mann-Whitney U test
+
+# Load the test and benchmark datasets
+locations_industry <- read_excel("data/locations_hydro_V10.xlsx")
+locations_bench <- read_excel("data/amadeus_benchmark_V3.xlsx")
+
+# Extract latitude and longitude values
+industry_lat <- locations_industry$Lat
+industry_lon <- locations_industry$Lon
+
+bench_lat <- locations_bench$Latitude
+bench_lon <- locations_bench$Longitude
+
+benchmark_xy <- convertXY(bench_lat, bench_lon)
+industry_xy <- convertXY(industry_lat, industry_lon)
+
+# Calculate Di values for both populations
+#library(McSpatial)
+#library(fields)
+
+di_industry <- calcDi(industry_xy$x, industry_xy$y, fun = "invert")
+di_bench <- calcDi(benchmark_xy$x, benchmark_xy$y, fun = "invert")
+
+# 1. Kolmogorov-Smirnov Test
+ks.test(di_industry, di_bench)
+
+# 2. Mann-Whitney U Test
+wilcox.test(di_industry, di_bench, alternative = "two.sided")
+
+# 3. Kernel Density Estimation and Comparison
+library(stats)
+
+# Kernel density estimation
+industry_density <- density(di_industry)
+bench_density <- density(di_bench)
+
+# Plot the densities
+plot(industry_density, main = "Density of Di Values", xlab = "Di Values", ylab = "Density")
+lines(bench_density, lty = 2)
+legend("topright", legend = c("Industry", "Benchmark"), lty = c(1, 2), col = c("black", "black"))
+
+# Compare the densities
+intersect_points <- industry_density$x[industry_density$y > bench_density$y]
+cat("Intersection points:", intersect_points, "\n")
+
+# Calculate kernel density estimates (kde) for observed and benchmark data
+kdeObs <- density(di_industry)
+kdeBench <- density(di_bench)
+
+# Call the globalValues function with the kdeObs and kdeBench as arguments
+globalValuesResult <- globalValues(kdeObs, kdeBench)
+
+# Print the result
+print(globalValuesResult)
+```
+
+```{r}
+
+```
+
+
+
+
+```{r}
+# Calculate the 95th percentile of Di values for the benchmark population
+bench_95th_percentile <- quantile(di_bench, 0.70)
+
+# Identify firms in the industry population that exceed the 95th percentile
+cluster_cores <- di_industry > bench_95th_percentile
+
+# Count the number of firms in the cluster cores
+num_cluster_cores <- sum(cluster_cores)
+
+cat("Number of firms in cluster cores:", num_cluster_cores, "\n")
+
+```
+```{r}
+# Get the indices of firms in the cluster cores
+cluster_indices <- which(cluster_cores)
+
+# Extract longitude and latitude for the cluster-core firms
+cluster_lon <- locations_industry$Lon[cluster_indices]
+cluster_lat <- locations_industry$Lat[cluster_indices]
+
+# Print the longitude and latitude information
+cat("Cluster-core firms' longitude and latitude:\n")
+print(cluster_lon)
+print(cluster_lat)
+
+# Create a data frame with longitude and latitude information
+cluster_data <- data.frame(longitude = cluster_lon, latitude = cluster_lat)
+
+# Write the data frame to a CSV file
+write.csv(cluster_data, file = "data/cluster_cores.csv", row.names = FALSE)
+
+cat("CSV file created: cluster_cores.csv\n")
+```
+
