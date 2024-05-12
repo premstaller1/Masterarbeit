@@ -146,7 +146,7 @@ localConfidenceBand <- function (KDEValues,esp){
 
 # function is used to calculate global dispersion or concentration 
 # needs the calculated Di values of the observes industry and the bechmark
-globalVaues<- function (kdeObs, kdeBench){
+globalValues<- function (kdeObs, kdeBench){
   #calculate the median value of Benchmark
   meanIntegral=0
   i=1
@@ -219,7 +219,7 @@ locations_industry <- read_excel("data/locations_hydro_V10.xlsx")
 #sampled_indices <- sample(nrow(locations_industry), 1000)
 #locations_industry <- locations_industry[sampled_indices, ]
 
-locations_bench <- read_excel("data/amadeus_benchmark_V3.xlsx")
+locations_bench <- read_excel("data/amadeus_benchmark_V4.xlsx")
 #sampled_indices <- sample(nrow(locations_bench), 3000)
 #locations_bench <- locations_bench[sampled_indices, ]
 
@@ -365,14 +365,6 @@ autoplot(Envelope, main = "", ylim = c(0, 20))
 ```
 
 
-```{r}
-DEnv <- DEnvelope(X, r = seq(0, 30000), NumberOfSimulations = 100, Alpha = 0.05, 
-          Cases = "INDUSTRY", Controls = "BENCH", Intertype = TRUE, Global = FALSE,
-          verbose = interactive())
-
-autoplot(DEnv, main = "", ylim = c(0, 200))
-
-```
 
 ```{r}
 autoplot(X)
