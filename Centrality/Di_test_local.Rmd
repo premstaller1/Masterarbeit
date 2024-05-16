@@ -22,8 +22,8 @@ bilatDistance <- function(lo, la){ # gives correctly computed bilateral distancs
  
 convertXY<- function(lat,lon){
   R=6371000
-  x = R * (cos(9000-lat)* cos(lon))
-  y = R * (cos(9000-lat) *sin(lon))
+  x = R * (cos(90-lat)* cos(lon))
+  y = R * (cos(90-lat) *sin(lon))
   ergeb=objects();
   ergeb$x=x
   ergeb$y=y
@@ -146,7 +146,7 @@ localConfidenceBand <- function (KDEValues,esp){
 
 # function is used to calculate global dispersion or concentration 
 # needs the calculated Di values of the observes industry and the bechmark
-globalValues<- function (kdeObs, kdeBench){
+globalValues<- function (kdeObs, kdeBench, obs_lat, obs_lon){
   #calculate the median value of Benchmark
   meanIntegral=0
   i=1
@@ -162,6 +162,8 @@ globalValues<- function (kdeObs, kdeBench){
   omega=0
   theta=0
   print(myMean)
+  concentration_lat <- c() # To store latitudes of concentration
+  concentration_lon <- c() # To store longitudes of concentration
   for(i in 1:(length(kdeObs$y)-1)){
     
     if(kdeObs$y[i]>kdeBench$y[i] && kdeObs$y[(i+1)]>kdeBench$y[(i+1)]){
@@ -175,11 +177,14 @@ globalValues<- function (kdeObs, kdeBench){
       integral=integralObs-integralBench
       if(kdeBench$x[i]< myMean){#Dispersion      
         omega=omega+integral
-        #print(paste("Dispersion an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
+        print(paste("Dispersion an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
       }
       else{#Concentration
         theta=theta+integral
-        #print(paste("Konzentration an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
+        concentration_lat <- c(concentration_lat, obs_lat[i])
+        concentration_lon <- c(concentration_lon, obs_lon[i])
+
+        print(paste("Konzentration an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
       }
     }
   }
@@ -188,6 +193,8 @@ globalValues<- function (kdeObs, kdeBench){
   ergeb$omega=omega
   ergeb$delta=theta-omega
   ergeb$myMean=myMean
+  ergeb$concentration_lat <- concentration_lat
+  ergeb$concentration_lon <- concentration_lon
   
   return (ergeb)
 }
@@ -207,6 +214,62 @@ install.packages("rgdal")
 install.packages("raster")
 
 ```
+```{r}
+locations_industry <- read_excel("data/locations_hydro_V10.xlsx")
+locations_bench <- read_excel("data/amadeus_benchmark_V4.xlsx")
+
+# Extract latitude and longitude values
+industry_lat <- locations_industry$Lat
+industry_lon <- locations_industry$Lon
+
+bench_lat <- locations_bench$Lat
+bench_lon <- locations_bench$Lon
+
+xy_industry <- convertXY(industry_lat, industry_lon)
+xy_bench <- convertXY(bench_lat, bench_lon)
+
+# Calculate Di values
+di_industry <- calcDi(industry_lon, industry_lat, fun = "invert")
+di_bench <- calcDi(bench_lon, bench_lat, fun = "invert")
+
+# Perform statistical tests
+ks_test_result <- ks.test(di_industry, di_bench)
+print(ks_test_result)
+
+mann_whitney_result <- wilcox.test(di_industry, di_bench, alternative = "two.sided")
+print(mann_whitney_result)
+
+# Kernel Density Estimation and Comparison
+library(stats)
+
+industry_density <- density(di_industry, n = 500)
+bench_density <- density(di_bench, n = 500)
+
+# Plot the densities
+plot(bench_density, main = "Density of Di Values", xlab = "Di Values", ylab = "Density")
+lines(industry_density, lty = 2)
+legend("topright", legend = c("Bench", "Industry"), lty = c(1, 2), col = c("black", "black"))
+
+# Calculate global values and concentrations
+result <- globalValues(industry_density, bench_density, industry_lat, industry_lon)
+
+# Print the list of concentration locations
+print(result$concentration_locations)
+```
+```{r}
+# Combine the latitudes and longitudes into a data frame
+concentration_df <- data.frame(
+  Latitude = result$concentration_lat,
+  Longitude = result$concentration_lon
+)
+
+# Print the concentration data frame
+print(concentration_df)
+
+# Write the data frame to a CSV file
+write.csv(concentration_df, "concentration_locations.csv", row.names = FALSE)
+```
+
 
 
 ```{r pressure, echo=FALSE}
@@ -216,12 +279,7 @@ library(sp)
 
 
 locations_industry <- read_excel("data/locations_hydro_V10.xlsx")
-#sampled_indices <- sample(nrow(locations_industry), 1000)
-#locations_industry <- locations_industry[sampled_indices, ]
-
 locations_bench <- read_excel("data/amadeus_benchmark_V4.xlsx")
-#sampled_indices <- sample(nrow(locations_bench), 3000)
-#locations_bench <- locations_bench[sampled_indices, ]
 
 # Extract latitude and longitude values
 industry_lat <- locations_industry$Lat
@@ -307,6 +365,19 @@ combined_df_xy <- combined_df_lonlat %>%
          y = Lon)
 
 combined_df_xy
+
+# Function to convert long coordinates to a readable format
+convert_coordinates <- function(data) {
+  data$x <- data$x / 100
+  data$y <- data$y / 100
+  return(data)
+}
+
+# Convert coordinates
+shortened_data <- convert_coordinates(combined_df_xy)
+
+# Print the shortened data
+print(shortened_data)
 
 ```
 
