@@ -1,0 +1,439 @@
+Country,City,Project name,Process type,Subprocess type,End-use,Production capacity T/year,Production capacity MWel,Output T/year,Latitude,Longitude,ID
+Austria,Pilsbach,Underground Sun Storage 2030,Water electrolysis,,Blending in natural gas pipelines,82.64150943396226,0.5,56.19622641509434,48.0405177,13.6765409494395,1
+Austria,Herzogenburg,SAN Group Herzogenburg,Water electrolysis,,Industrial heat,115.69811320754715,0.7,78.67471698113206,48.262398157192,15.6886018760215,2
+Austria,Linz,H2FUTURE (Phase 1),Water electrolysis,,Steel,991.6981132075471,6.0,674.354716981132,48.3059078,14.286198,3
+Austria,Weissenstein,Unknown,Reforming,,Unknown,Unknown,,Unknown,46.68239,13.72339,4
+Austria,Brückl,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,146.7480784,14.5309443,5
+Austria,Schwechat,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.1409268,16.4763778,6
+Austria,Schwechat,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.1419268,16.4763778,7
+Austria,Linz,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.30994,14.28583,8
+Austria,Linz,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.31094,14.28583,9
+Belgium,Antwerp,HRS Compagnie Maritime Belge,Water electrolysis,,Mobility,165.2830188679245,1.0,112.39245283018867,51.2430063017793,4.39739266986595,10
+Belgium,Jemeppe sur Sambre,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.4660855,4.6687027,11
+Belgium,Saint-Ghislain,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.4705544,3.8169701,12
+Belgium,Tessenderlo,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.0657584,5.0883599,13
+Belgium,Antwerp,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.2213404,4.4051485,14
+Belgium,Antwerp,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.2353404,4.4051485,15
+Belgium,Antwerp,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.2263404,4.4051485,16
+Belgium,Antwerp,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.2283404,4.4051485,17
+Belgium,Antwerp,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.2293404,4.4051485,18
+Belgium,Antwerp,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.2333404,4.4051485,19
+Belgium,Antwerp,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.2343404,4.4051485,20
+Bulgaria,Dimitrovgrad,Unknown,Reforming,,Unknown,Unknown,,Unknown,42.0545053,25.5945249,21
+Bulgaria,Burgas,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,42.5047926,27.4626361,22
+Bulgaria,Burgas,Unknown,Reforming,,Unknown,Unknown,,Unknown,42.5057926,27.4626361,23
+Croatia,Rijeka,Unknown,Reforming,,Unknown,Unknown,,Unknown,45.3270631,14.442176,24
+Croatia,Kutina,Unknown,Reforming,,Unknown,Unknown,,Unknown,45.4792811,16.7763267,25
+Czechia,Ostrava,Unknown,Reforming,,Unknown,Unknown,,Unknown,49.8219226,18.2625243,26
+Czechia,Kralupy nad Vltavou,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.2416453,14.3106451,27
+Czechia,Kralupy nad Vltavou,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.2426453,14.3106451,28
+Czechia,Litvínov,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.5984262,13.6102421,29
+Czechia,Litvínov,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.6004262,13.6102421,30
+Czechia,Usti nad Labem,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.6621164,14.0531456,31
+Denmark,Ejby,Strandmøllen A/S - Ejby,Water electrolysis,,Mobility,82.64150943396226,0.5,56.19622641509434,55.4485223877548,9.95609540615928,32
+Denmark,Hobro,HyBALANCE,Water electrolysis,,Mobility,247.92452830188677,1.5,168.588679245283,56.6262199423679,9.82570361342709,33
+Denmark,Avedore,H2RES,Water electrolysis,,Mobility,330.566037735849,2.0,224.78490566037735,55.6255437,12.4550501,34
+Denmark,Fredericia,Unknown,Reforming,,Unknown,Unknown,,Unknown,55.5689298,9.749517,35
+Denmark,Kalundborg,Unknown,Reforming,,Unknown,Unknown,,Unknown,55.686429,11.089188,36
+Denmark,Frederikssund,Unknown,Reforming,,Unknown,Unknown,,Unknown,55.835592,12.062436,37
+Finland,Hamina,Tecoil,Water electrolysis,,Refining,115.69811320754715,0.7,78.67471698113206,60.5267411092739,27.141011962863,38
+Finland,Kokkola,Woikoski Kokkola electrolyzer,Water electrolysis,,Unknown,1487.5471698113206,9.0,1011.5320754716981,63.8463405383208,23.0330068194374,39
+Finland,Porvoo,Unknown,Reforming,,Unknown,Unknown,,Unknown,60.3931919,25.6652739,40
+Finland,Porvoo,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,60.3951919,25.6652739,41
+Finland,Porvoo,Unknown,Reforming,,Unknown,Unknown,,Unknown,60.3961919,25.6652739,42
+Finland,Kuusankoski ,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,60.9069253,26.6243555,43
+Finland,Voikkaa,Unknown,Reforming,,Unknown,Unknown,,Unknown,60.9412608,26.6195357,44
+Finland,Lappeenranta,Unknown,Reforming,,Unknown,Unknown,,Unknown,61.0549929,28.1896627,45
+Finland,Joutseno,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,61.1182338,28.5081602,46
+Finland,Joutseno,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,61.1192338,28.5081602,47
+Finland,Harjavalta,Unknown,Reforming,,Unknown,Unknown,,Unknown,61.3137102,22.1413063,48
+Finland,Hameenlinna,Unknown,Reforming,,Unknown,Unknown,,Unknown,60.97174,24.538087,49
+Finland,Sotkamo,Unknown,Reforming,,Unknown,Unknown,,Unknown,64.1306547,28.3904978,50
+Finland,Oulu,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,65.0120888,25.4650772,51
+Finland,Oulu,Unknown,Reforming,,Unknown,Unknown,,Unknown,65.0130888,25.4650772,52
+France,Fos sur Mer,Jupiter 1000 (ALK),Water electrolysis,,Blending in natural gas pipelines,82.64150943396227,0.5,56.196226415094344,43.4369698295325,4.94778991120009,53
+France,Fos sur Mer,Jupiter 1000 (PEM),Water electrolysis,,Blending in natural gas pipelines,82.64150943396227,0.5,56.196226415094344,43.4380714,4.945595,54
+France,Bethune,Syndicat mixte des transports Artois-Gohelle (SMT AG),Water electrolysis,,Mobility,82.64150943396227,0.5,56.196226415094344,49.8808904,1.1415922,55
+France,Toulouse,Hyport - Toulouse airport,Water electrolysis,,Mobility,115.69811320754717,0.7,78.67471698113208,43.6366065081633,1.3711896083922,56
+France,Bouin,Lhyfe Bouin (Phase 1),Water electrolysis,,Mobility,123.9622641509434,0.75,84.29433962264152,46.9744444,-2.0005556,57
+France,Auxerre,AuxHyGen/Auxr H2,Water electrolysis,,Mobility,165.28301886792454,1.0,112.39245283018869,47.8031609515491,3.58821986608128,58
+France,Saint-Florentin,Hycaunais,Water electrolysis,,Blending in natural gas pipelines,165.28301886792454,1.0,112.39245283018869,47.9929935579677,3.71096606770049,59
+France,Le Croisic,SEM-REV offshore hydrogen at Le Croisic,Water electrolysis,,Unknown,165.28301886792454,1.0,112.39245283018869,47.2641973154324,-2.65015716009921,60
+France,Lavéra,Lavéra Kem One,By-product,Chlor-alkali,Unknown,9548,,6588.12,43.388073,5.030569,61
+France,Lavéra,Lavéra Naphtachimie SA,By-product,Ethylene,Refining,12639.939999999999,,4213.313333333333,43.389073,5.030569,62
+France,Lavéra,Lavéra Petrolneos Refining Ltd.,Reforming,,Refining,27858.551999999996,,20234.10618947373,43.390073,5.030569,63
+France,Lavéra,Lavéra Air Liquide,Reforming,,Refining,19697.495964437436,,14306.602332065086,43.392073,5.030569,64
+France,La Mede,La Mede Total,Reforming,,Refining,21000,,15252.631578947368,43.399232,5.111521,65
+France,Lacq,Lacq Air Liquide,Reforming,,Other chemicals,1411.6538774513492,,1101.0900244120523,43.413249,-0.61914,66
+France,Fos sur Mer,Fos sur Mer Kem One,By-product,Chlor-alkali,Unknown,9324,,6433.5599999999995,43.436882,4.945711,67
+France,Fos,Fos AGA Gas,Reforming,,Unknown,709.1098547197478,,553.1056866814033,43.437882,4.945711,68
+France,Fos sur Mer,Fos sur Mer ExxonMobil,Reforming,,Refining,34789.464,,25268.137010526316,43.439882,4.945711,69
+France,Berre l’Etang,Berre l’Etang LyondellBasell,By-product,Ethylene,Other chemicals,8028.07,,4014.035,43.4757729,5.167309,70
+France,Saint Auban,Saint Auban Arkema (Kem One),By-product,Chlor-alkali,Unknown,560,,386.4,43.848478,6.726625,71
+France,Gordes,Roussilon Air Liquide,Reforming,,Unknown,1988.082,,1550.70396,43.911315,5.200176,72
+France,Ambès,Ambès Nouryon,By-product,Sodium chlorate,Unknown,3683.4,,2873.052,45.012825,-0.530755,73
+France,Jarrie,Jarrie Arkema (Kem One),By-product,Chlor-alkali,Unknown,2100,,1449,45.1124266,5.7547492,74
+France,Jarrie,Jarrie Arkema,By-product,Sodium chlorate,Other chemicals,4472.699999999999,,3488.705999999999,45.1134266,5.7547492,75
+France,Jarrie,Jarrie Arkema,Reforming,,Other chemicals,3111,,2426.58,45.1144266,5.7547492,76
+France,Le Pont de Claix,Le Pont de Claix Vencorex,By-product,Chlor-alkali,Unknown,3332.0000000000005,,2299.08,45.123218,5.69782,77
+France,Le Pont de Claix,Le Pont de Claix Air Liquide,Reforming,,Other chemicals,5745.102989627585,,4481.180331909516,45.124218,5.69782,78
+France,Le Pont de Claix,Le Pont de Claix Air Liquide,Reforming,,Unknown,2363.6995157324923,,1843.685622271344,45.125218,5.69782,79
+France,Pombliere,Pombliere MSSA,By-product,Chlor-alkali,Unknown,1176,,811.4399999999999,45.498975,6.559298,80
+France,Feyzin,Feyzin Total,By-product,Ethylene,Refining,4270.25,,3437.8395408527776,45.6730259,4.8602463,81
+France,Feyzin,Feyzin Total,Reforming,,Refining,24685.68,,17929.59915789474,45.6740259,4.8602463,82
+France,Saint Fons,Saint Fons Air Liquide,Reforming,,Unknown,11818.497578662464,,9218.428111356721,45.708874,4.853374,83
+France,Fos Tonkin,Fos Tonkin Air Liquide,Reforming,,Unknown,Unknown,,Unknown,43.457513,4.853221,84
+France,Tavaux,Tavaux Solvay,By-product,Chlor-alkali,Unknown,10359.999999999998,,7148.399999999998,47.036533,5.407559,85
+France,Donges,Donges Total,Reforming,,Refining,47075.36744664286,,34191.58267177218,47.318789,-2.074694,86
+France,Ottmarsheim,Ottmarshein BOREALIS-PRODUITS ET ENGRAIS CHIMIQUES DU RHIN,Reforming,,Ammonia,46163.65,,26313.280499999997,47.78719,7.506512,87
+France,Thann,Thann Vynova PPC,By-product,Chlor-alkali,Other chemicals,1176,,811.4399999999999,47.810702,7.102382,88
+France,Chalampe,Chalampe Linde,Reforming,,Other chemicals,16414.579970364528,,12803.372376884332,47.8197789,7.539769,89
+France,Grandpuits-Bailly-Carrois,Grandpuits-Bailly-Carrois Borealis,Reforming,,Ammonia,77945.5475,,44428.962074999996,48.5854426,2.9781166,90
+France,Grand-Quevilly,Grand-Quevilly Borealis,Reforming,,Ammonia,71021,,40481.969999999994,49.411811,1.041384,91
+France,Port Jérôme,Port Jérôme Air Liquide,Reforming,,Refining,26000.69467305742,,18884.715078325917,49.4890146,0.5676293,92
+France,Notre Dame de Gravenchon,Notre Dame de Gravenchon ExxonMobil Chemical,By-product,Ethylene,Refining,7259.425,,5844.327219449722,49.489108,0.567624,93
+France,Port Jérôme,Port Jérôme ExxonMobil,Reforming,,Refining,56636.246999999996,,41135.80045263159,49.4900146,0.5676293,94
+France,Port Jérôme,Port Jérôme Air Liquide,Reforming (carbon capture),,Refining,13394.297255817459,,9728.48958580426,49.4920146,0.5676293,95
+France,Le Havre,Le Havre YARA,Reforming,,Ammonia,71021,,40481.969999999994,49.49437,0.107929,96
+France,Gonfreville L'Orcher,Gonfreville L'Orcher Total,By-product,Ethylene,Refining,8967.525,,7219.463035790833,49.502579,0.233079,97
+France,Gonfreville L'Orcher,Gonfreville L'Orcher Total,Reforming,,Refining,36153.396,,26258.78235789474,49.503579,0.233079,98
+France,Gonfreville L'Orcher,Gonfreville L'Orcher Total/Air Liquide,Reforming,,Refining,106524.04000000001,,77370.09221052636,49.504579,0.233079,99
+France,Waziers,Waziers Air Liquide,Reforming,,Unknown,3832.5,,2989.35,50.3871286,3.1093554,100
+France,Loos,Loos Kuhimann France,By-product,Chlor-alkali,Unknown,980,,676.1999999999999,50.615139,3.017729,101
+France,Dunkerque,Dunkerque Versalis (Eni Group),By-product,Ethylene,Refining,6490.78,,5225.516102096222,51.0333684,2.3767763,102
+Germany,Berlin,H2BER (Berlin airport),Water electrolysis,,Mobility,82.64150943396226,0.5,56.19622641509434,52.3699921358899,13.5242988316558,103
+Germany,Dauerthal,"Hybrid Power Plant Enertrag, Prenzlau",Water electrolysis,,Power generation,82.64150943396226,0.5,56.19622641509434,53.3649417,13.9684468,104
+Germany,Hamburg,Hamburg Hafen City HRS,Water electrolysis,,Mobility,99.1698113207547,0.6,67.4354716981132,53.5459162654515,10.0025167626962,105
+Germany,Salzgitter,GrInHy2.0,Water electrolysis,,Steel,119.00377358490564,0.72,80.92256603773585,52.1503721,10.3593147,106
+Germany,Lampoldshausen,H2orizon,Water electrolysis,,Mobility,132.22641509433961,0.8,89.91396226415094,49.2644733,9.401743,107
+Germany,Esslingen,Green Hydrogen Esslingen (P2G2P),Water electrolysis,,Residential heat,165.2830188679245,1.0,112.39245283018867,48.7427584,9.3071685,108
+Germany,Haurup,Windgas Haurup,Water electrolysis,,Residential heat,165.2830188679245,1.0,112.39245283018867,54.7267886,9.3478232,109
+Germany,Werlte,Fairfuel Atmosfair – PtL in Werlte,Water electrolysis,,E-fuels,206.60377358490564,1.25,140.49056603773585,52.8528701,7.6764179,110
+Germany,Leuna,MegalyseurPlus (HYPOS),Water electrolysis,,Unknown,206.60377358490564,1.25,140.49056603773585,51.2973442363618,11.9973813222433,111
+Germany,Haßfurt,Windgas Haßfurt (Haßfurt),Water electrolysis,,Blending in natural gas pipelines,206.60377358490564,1.25,140.49056603773585,50.0318698,10.5065562,112
+Germany,Wyhlen,H2 Wyhlen (Power-to-Gas Baden-Württemberg) (Phase 1),Water electrolysis,,Mobility,214.86792452830187,1.3,146.11018867924528,47.5381816277997,7.70626339365355,113
+Germany,Duisburg,Carbon2Chem,Water electrolysis,,Other chemicals,330.566037735849,2.0,224.78490566037735,51.4914175773825,6.72396950620628,114
+Germany,Twist,Green H2 hub Haren,Water electrolysis,,Blending in natural gas pipelines,330.566037735849,2.0,224.78490566037735,52.6474242,7.0947959,115
+Germany,Laage,Rostock - Laage Industrial park (Phase 1),Water electrolysis,,Mobility,330.566037735849,2.0,224.78490566037735,53.9034052944025,12.2831689290693,116
+Germany,Falkenhagen,WindGas Falkenhagen,Water electrolysis,,Methanol,330.566037735849,2.0,224.78490566037735,53.2003105413885,12.2351124180165,117
+Germany,Brunsbüttel,Wind to Gas Südermarsch,Water electrolysis,,Mobility,396.6792452830188,2.4,269.7418867924528,53.8939674684032,9.17372152088397,118
+Germany,Pirmasens,Energiepark Pirmasens-Winzeln,Water electrolysis,,Unknown,413.2075471698113,2.5,280.9811320754717,49.1996961,7.6087847,119
+Germany,Wuppertal,H2W,Water electrolysis,,Mobility,413.2075471698113,2.5,280.9811320754717,51.264018,7.1780374,120
+Germany,Salzgitter,WindH2 Windwasserstoff Salzgitter,Water electrolysis,,Steel,413.2075471698113,2.5,280.9811320754717,52.1523434613963,10.4066598815022,121
+Germany,Hamburg-Neuhof,H&R Ölwerke Schindler Hamburg-Neuhof,Water electrolysis,,Refining,826.4150943396226,5.0,561.9622641509434,53.5142697661571,9.95004694091784,122
+Germany,Mainz,Energiepark Mainz,Water electrolysis,,Industrial heat,991.6981132075471,6.0,674.354716981132,49.9999952,8.2710237,123
+Germany,Werlte,Audi e-gas,Water electrolysis,,E-fuels,1041.2830188679243,6.3,708.0724528301886,52.8518701,7.6764179,124
+Germany,Wunsiedel,Energy Park Wunsiedel,Water electrolysis,,Unknown,1446.2264150943395,8.75,983.4339622641509,50.0373241,12.0027278,125
+Germany,Wesseling,REFHYNE (Phase 1),Water electrolysis,,Refining,1652.830188679245,10.0,1123.9245283018868,50.8605615564851,6.98058161550651,126
+Germany,Gendorf,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.1725118,12.7179825,127
+Germany,Burghausen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.1725613,12.8310753,128
+Germany,Burghausen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.1735613,12.8310753,129
+Germany,Burghausen,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.1745613,12.8310753,130
+Germany,Gersthofen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.4242503,10.876347,131
+Germany,Münchsmünster,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.7651018,11.6898582,132
+Germany,Ingolstadt,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.7667395,11.4226498,133
+Germany,Ingolstadt,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.7687395,11.4226498,134
+Germany,Neustadt an der Donau,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.8030062,11.7670734,135
+Germany,Karlsruhe,Unknown,Reforming,,Unknown,Unknown,,Unknown,49.0068901,8.4036527,136
+Germany,Ludwigshafen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,49.4774018,8.4447451,137
+Germany,Ludwigshafen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,49.4784018,8.4447451,138
+Germany,Ludwigshafen,Unknown,Reforming,,Unknown,Unknown,,Unknown,49.4794018,8.4447451,139
+Germany,Ludwigshafen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,49.4804018,8.4447451,140
+Germany,Ludwigshafen,Unknown,Reforming,,Unknown,Unknown,,Unknown,49.4814018,8.4447451,141
+Germany,Offstein,Unknown,Reforming,,Unknown,Unknown,,Unknown,49.6060311,8.2374556,142
+Germany,Frankfurt am Main,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.1109221,8.6821267,143
+Germany,Andernach,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.426057,7.4086636,144
+Germany,Wesseling,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.8255624,6.9725385,145
+Germany,Wesseling,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.8265624,6.9725385,146
+Germany,Wesseling,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.8275624,6.9725385,147
+Germany,Lülsdorf,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.8305258,7.0123486,148
+Germany,Lülsdorf,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.8315258,7.0123486,149
+Germany,Godorf,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.8534581,6.9786695,150
+Germany,Hürth-Knapsack,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.8621159,6.8437883,151
+Germany,Jena,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.927054,11.5892372,152
+Germany,Cologne,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.937531,6.9602786,153
+Germany,Cologne,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,50.938531,6.9602786,154
+Germany,Leverkusen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.0459248,7.0192196,155
+Germany,Dormagen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.0936851,6.8289112,156
+Germany,Dormagen,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.0946851,6.8289112,157
+Germany,Boehlen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.2016946,12.3870379,158
+Germany,Bohlen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.2006946,12.3870379,159
+Germany,Nünchritz,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.2992981,13.3899305,160
+Germany,Leuna,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.3252659,12.0242284,161
+Germany,Leuna,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.3262659,12.0242284,162
+Germany,Leuna,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.3282659,12.0242284,163
+Germany,Uerdingen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.3547878,6.6428946,164
+Germany,Schkopau,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.3910745,11.9851505,165
+Germany,Oberhausen,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.4878429,6.863308,166
+Germany,Gelsenkirchen,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.5187651,7.0838411,167
+Germany,Gelsenkirchen,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.5207651,7.0838411,168
+Germany,Rheinberg,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.5460798,6.5899097,169
+Germany,Castrop-Rauxel,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.5632625,7.3150145,170
+Germany,Bitterfeld,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.6265334,12.3133061,171
+Germany,Bitterfeld,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.6275334,12.3133061,172
+Germany,Marl,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.6601234,7.1060218,173
+Germany,Marl,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.6611234,7.1060218,174
+Germany,Bernburg,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.7916385,11.7401,175
+Germany,Piesteritz,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.8735147,12.5979522,176
+Germany,Ibbenbüren,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,52.2767721,7.7189946,177
+Germany,Minden,Unknown,Reforming,,Unknown,Unknown,,Unknown,52.2923549,8.9160539,178
+Germany,Salzbergen,Unknown,Reforming,,Unknown,Unknown,,Unknown,52.3216445,7.3436252,179
+Germany,Lingen,Unknown,Reforming,,Unknown,Unknown,,Unknown,52.5403079,7.3292862,180
+Germany,Werlte,Unknown,Reforming,,Unknown,Unknown,,Unknown,52.8535209,7.671886,181
+Germany,Schwedt,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.0634695,14.2734639,182
+Germany,Bremen,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.0792962,8.8016936,183
+Germany,Wilhelmshaven,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.5323403,8.1068722,184
+Germany,Hamburg,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.5510846,9.9936819,185
+Germany,Hamburg,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.5520846,9.9936819,186
+Germany,Hamburg,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.5530846,9.9936819,187
+Germany,Stade,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,53.5928618,9.4709494,188
+Germany,Stade,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.5938618,9.4709494,189
+Germany,Brunsbüttel,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,53.8988902,9.1338853,190
+Germany,Brunsbüttel,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.8998902,9.1338853,191
+Germany,Brunsbüttel,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.9008902,9.1338853,192
+Germany,Brunsbüttel,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,54.1951764,9.1019015,193
+Germany,Brunsbüttel,Unknown,Reforming,,Unknown,Unknown,,Unknown,54.1961764,9.1019015,194
+Greece,Mandra,Linde Mandra,Water electrolysis,,Other chemicals,165.2830188679245,1.0,112.39245283018867,38.0668785013231,23.5162462877533,195
+Greece,Agioi Theodoroi,Unknown,Reforming,,Unknown,Unknown,,Unknown,37.9282447,23.1433311,196
+Greece,Elefsis,Unknown,Reforming,,Unknown,Unknown,,Unknown,38.0412749,23.5418125,197
+Greece,Aspropyrgos,Unknown,Reforming,,Unknown,Unknown,,Unknown,38.0619063,23.5910603,198
+Greece,Inofita,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,38.3080648,23.6391172,199
+Greece,Thessaloniki,Unknown,Reforming,,Unknown,Unknown,,Unknown,40.6400629,22.9444191,200
+Greece,Nea Karvali,Unknown,Reforming,,Unknown,Unknown,,Unknown,40.9624179,24.5082696,201
+Hungary,Petfurdo,Unknown,Reforming,,Unknown,Unknown,,Unknown,47.1616056,18.1337393,202
+Hungary,Százhalombatta,Unknown,Reforming,,Unknown,Unknown,,Unknown,47.3083325,18.9096709,203
+Hungary,Budapest,Unknown,Reforming,,Unknown,Unknown,,Unknown,47.498912,19.040235,204
+Hungary,Tiszaujvaros,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,47.9159846,21.0427447,205
+Hungary,Tiszaujvaros,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,47.9169846,21.0427447,206
+Hungary,Kazincbarcika,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.2489437,20.6189771,207
+Hungary,Kazincbarcika,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.2499437,20.6189771,208
+Hungary,Kazincbarcika,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.2509437,20.6189771,209
+Iceland,Hellisheidi,Hellisheidi ON Power ely,Water electrolysis,,Mobility,115.69811320754715,0.7,78.67471698113206,64.0364234782397,-21.4043909789244,210
+Iceland,Grindavik,George Olah CO2 to methanol plant,Water electrolysis,,E-fuels,991.6981132075471,6.0,674.354716981132,63.844239,-22.4317498,211
+Ireland,Whitegate,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.8267841,-8.2321121,212
+Ireland,Fermoy,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,52.1372719,-8.2812256,213
+Italy,Troia,INGRID (Phase 1),Water electrolysis,,Unknown,198.33962264150944,1.2,134.87094339622644,41.363128,15.312347,214
+Italy,Bolzano,Bolzano HRS (CHIC),Water electrolysis,,Mobility,247.9245283018868,1.5,168.58867924528303,46.4740985384316,11.3171937080776,215
+Italy,Gela,Gela Praoil,Reforming,,Refining,26599.86493159192,,19512.498467098645,37.0741526,14.2403537,216
+Italy,Priolo,Priolo Versalis,By-product,Ethylene,Other chemicals,9052.93,,6640.833823857302,37.1578584,15.1837006,217
+Italy,Priolo,Priolo Air Liquide,Reforming,,Refining,23636.995157324927,,17339.06668173891,37.1588584,15.1837006,218
+Italy,Priolo,Priolo ISAB SpA (sud),Reforming,,Refining,15322.263825,,11239.743140301003,37.1598584,15.1837006,219
+Italy,Melilli,Melilli ISAB SpA (nord),Reforming,,Refining,14857.9528,,10899.144863322184,37.1810245,15.1253159,220
+Italy,Augusta,Augusta Sonatrach,Reforming,,Refining,46302.19232142857,,33965.26482441471,37.2500684,15.2216971,221
+Italy,Catania,Catania Air Liquide,Reforming,,Unknown,275.764943502124,,215.09665593165676,37.5078772,15.0830304,222
+Italy,Milazzo,Milazzo Linde,Reforming,,Refining,41758.69144460737,,30632.35113773874,38.2207102,15.2419327,223
+Italy,Milazzo,Milazzo Raffineria di Milazzo SpA.(Eni),Reforming,,Refining,106531.35894214286,,78146.74936892983,38.2217102,15.2419327,224
+Italy,Sarroch,Sarroch Saras SpA Raffinerie Sarde,Reforming,,Refining,94502.88,,69323.1828762542,39.0654974,9.0108377,225
+Italy,Assemini,Assemini EniChem,By-product,Chlor-alkali,Other chemicals,699.9999999999999,,482.9999999999999,39.2106099,9.0018424,226
+Italy,Taranto,Taranto Linde,Reforming,,Refining,44122.39096033986,,32366.257805912628,40.4643606,17.2470303,227
+Italy,Taranto,Taranto Eni,Reforming,,Refining,43313.820000000014,,31773.125484949865,40.4653606,17.2470303,228
+Italy,Farrandina,Farrandina Sapio,Reforming,,Unknown,820.9916317977522,,640.3734728022467,40.4974557,16.4570531,229
+Italy,Brindisi,Brindisi Versalis,By-product,Ethylene,Other chemicals,7515.639999999999,,5513.145061315496,40.6327278,17.9417616,230
+Italy,Campochiaro,Campochiaro Fater,By-product,Chlor-alkali,Unknown,560,,386.4,41.4414924,14.5072722,231
+Italy,Bussi sul Tirino,Bussi sul Tirino Ausimont SpA,By-product,Chlor-alkali,Other chemicals,504,,347.76,42.2145849,13.8253915,232
+Italy,Volterra,Saline di Volterra Altair Chimica SpA,By-product,Chlor-alkali,Other chemicals,2100,,1449,43.399395,10.8660333,233
+Italy,Rosignano Marittimo,Rosignano Solvay,By-product,Chlor-alkali,Other chemicals,4200,,2898,43.4066931,10.4621366,234
+Italy,Livorno,Livorno Eni,Reforming,,Refining,13631.665428571428,,9999.594037904126,43.548473,10.3105674,235
+Italy,Falconara Marittima,Falconara Marittima/Ancona Api Energia SpA,Reforming,,Refining,13131.663976291624,,9632.814823188282,43.6250339,13.3702811,236
+Italy,Falconara Marittima,Falconara Marittima/Ancona Anonima Petroli Italiana S.p.A.,Reforming,,Refining,6686.0787599999985,,4904.615188494982,43.6240339,13.3702811,237
+Italy,Genova,Genova Ansaldo,Reforming,,Unknown,722.2415186960392,,563.3483845829106,44.4056499,8.946256,238
+Italy,Ravenna,Ravenna Linde,Reforming,,Unknown,393.94991928874873,,307.280937045224,44.4183598,12.2035294,239
+Italy,Ravenna,Ravenna SOL SpA,Reforming,,Unknown,393.94991928874873,,307.280937045224,44.4193598,12.2035294,240
+Italy,Ravenna,Ravenna Linde,Reforming,,Unknown,2363.6995157324923,,1843.685622271344,44.4203598,12.2035294,241
+Italy,Busalla,Busalla Iplom Spa,Reforming,,Refining,12600.383999999998,,9243.091050167222,44.5692431,8.9461497,242
+Italy,Ferrara,Ferrara YARA,Reforming,,Ammonia,106531.5,,77767.995,44.8391237,11.619787,243
+Italy,Sannazzaro,Sannazaro de Burgondi Eni,Reforming,,Refining,111434.646,,81743.58647491637,45.1019768,8.907521,244
+Italy,Venaria-Reale,Venaria-Reale Air Liquide,Reforming,,Unknown,787.8998385774975,,614.561874090448,45.1437329,7.6232892,245
+Italy,Mantova,Mantova Sapio,Reforming (carbon capture),,Unknown,1181.8497578662461,,921.842811135672,45.1564168,10.7913751,246
+Italy,Mantova,Mantova Air Products,Reforming,,Unknown,558.0957189923939,,435.3146608140673,45.1574168,10.7913751,247
+Italy,Mantova,Mantova Air Products,Reforming,,Refining,13985.0661438703,,10258.83335860274,45.1584168,10.7913751,248
+Italy,Mantova,Mantova Versalis,By-product,Styrene,Refining,11767.91,,8632.424503901895,45.1604168,10.7913751,249
+Italy,Venice,Porto Marghera Versalis,By-product,Ethylene,Other chemicals,4184.845,,3069.8194091415835,45.4428474,12.3155151,250
+Italy,San Martino di Trecate,San Martino di Trecate Sarpom (Esso Group),Reforming,,Refining,42575.51625,,31231.5381187291,45.4468891,8.7901068,251
+Italy,Brescia,Brescia Industrie Chimiche Caffaro,By-product,Sodium chlorate,Unknown,631.4400000000002,,492.52320000000014,45.5425526,10.2118019,252
+Italy,Osio Sopra,Osio Sopra SIAD,Reforming,,Unknown,1181.8497578662461,,921.842811135672,45.6301358,9.5886269,253
+Italy,Torviscosa,Torviscosa Industrie Chimiche Caffaro (Halo Industry),By-product,Chlor-alkali,Unknown,672,,463.67999999999995,45.8292352,13.2627729,254
+Italy,Pieve Vergonte,Pieve Vergonte HydroChem Italia,By-product,Chlor-alkali,Unknown,699.9999999999999,,482.9999999999999,46.0085014,8.2652233,255
+Lithuania,Jonava,Unknown,Reforming,,Unknown,Unknown,,Unknown,55.0727242,24.2793337,256
+Lithuania,Mazeikiai,Unknown,Reforming,,Unknown,Unknown,,Unknown,56.3092439,22.341468,257
+Netherlands,Veendam,Hystock,Water electrolysis,,Mobility,165.28301886792454,1.0,112.39245283018869,53.1028443,6.8694863,258
+Netherlands,Oosterwolde,Hydrogenpilot Oosterwolde (SinneWetterstof Hydrogen Pilot Project),Water electrolysis,,Mobility,214.8679245283019,1.3,146.1101886792453,53.0019687,6.29213356390565,259
+Netherlands,Nieuwegein,HySolar HRS,Water electrolysis,,Mobility,330.5660377358491,2.0,224.78490566037738,52.0298704,5.09293340872922,260
+Netherlands,Bergen op Zoom,Bergen op Zoom Sabic EuroPetrochemicals,By-product,Chlor-alkali,Unknown,2492,,1719.4799999999998,51.4945758,4.2871622,261
+Netherlands,Bergen op Zoom,Bergen op Zoom Air Liquide,Reforming,,Refining,24168.84,,21987.60705882353,51.4955758,4.2871622,262
+Netherlands,Bergen op Zoom,Bergen op Zoom Air Liquide,Reforming,,Refining,812.125,,738.8308823529411,51.4965758,4.2871622,263
+Netherlands,Botlek,Botlek-Rotterdam Nobian,By-product,Chlor-alkali,Unknown,17836,,12306.839999999998,51.8817247,4.2931302,264
+Netherlands,Botlek,Botlek-Rotterdam ExxonMobil Chemical,Reforming,,Refining,26000,,23908.23529411764,51.8847247,4.2931302,265
+Netherlands,Botlek,Botlek-Rotterdam Air Products,Reforming,,Other chemicals,102000,,81993.6,51.8857247,4.2931302,266
+Netherlands,Botlek,Botlek-Rotterdam Air Liquide,Reforming,,Other chemicals,9500,,7410,51.8887247,4.2931302,267
+Netherlands,Botlek,Botlek-Rotterdam Air Liquide,Reforming,,Other chemicals,102492,,79943.76000000001,51.8897247,4.2931302,268
+Netherlands,Botlek,Botlek-Rotterdam Air Liquide,Reforming,,Other chemicals,21000,,15715.44,51.8907247,4.2931302,269
+Netherlands,Delfzijl,Delfzijl Nobian,By-product,Chlor-alkali,Unknown,3388,,2337.72,53.3310272,6.9244598,270
+Netherlands,Delfzijl,Delfzijl BioMCN,Reforming,,Methanol,60984,,20742.867921059205,53.3320272,6.9244598,271
+Netherlands,Europoort Rotterdam,Europoort Rotterdam BP,Reforming,,Refining,11791.923340177962,,10727.704634215084,51.9436775,4.1379495,272
+Netherlands,Geleen,Geleen Sabic EuroPetrochemicals,By-product,Ethylene,Refining,22376.11,,20356.670580177277,50.9672139,5.8277247,273
+Netherlands,Geleen,Geleen OCI Nitrogen,Reforming,,Ammonia,210222.16,,25577.029466666667,50.9682139,5.8277247,274
+Netherlands,IJmuiden,IJmuiden Linde,Reforming,,Other chemicals,788.4,,614.952,52.4569544,4.6060138,275
+Netherlands,Limburg,Geleen DSM,By-product,Styrene,Other chemicals,525.6,,385.55719063545155,51.4427238,6.0608726,276
+Netherlands,Maasvlakte,Maasvlakte LyondellBasell/Covestro,By-product,Styrene,Refining,17000,,9089.872164954748,51.9632789,4.031126,277
+Netherlands,Merseyweg,Rotterdam-Merseyweg Air Products,Reforming,,Unknown,1971,,1537.38,51.904422,4.2471328,278
+Netherlands,Merseyweg,Rotterdam-Merseyweg Air Products,Reforming,,Unknown,15820.45488,,12339.9548064,51.905422,4.2471328,279
+Netherlands,Middelburg,Middelburg Eastman,Reforming,,Other chemicals,560.64,,437.2992,51.4987962,3.610998,280
+Netherlands,Moerdijk,Moerdijk Shell Chemicals,By-product,Ethylene,Refining,16585.650999999998,,15088.799338436742,51.7018167,4.6273499,281
+Netherlands,Moerdijk,Moerdijk ELLBA,By-product,Styrene,Refining,10877.9,,10255.345860747662,51.7038167,4.6273499,282
+Netherlands,Moerdijk,Moerdijk Shell Chemicals,By-product,Styrene,Refining,8702.32,,8204.276688598131,51.7048167,4.6273499,283
+Netherlands,Pernis,Rotterdam-Vondenlingenplaat-Pernis Shell,Reforming (carbon capture),,Other industry,4746,,4318.860000000001,51.8897319,4.3890747,284
+Netherlands,Pernis,Rotterdam-Vondenlingenplaat-Pernis Shell,Reforming,,Refining,217000,,179388.4124491685,51.8927319,4.3890747,285
+Netherlands,Sluiskil,Sluiskil YARA,Reforming,,Ammonia,323145.55,,235896.25149999998,51.2777029,3.8366881,286
+Netherlands,Terneuzen,Terneuzen Dow,By-product,Ethylene,Other chemicals,31172.825000000004,,25561.716500000002,51.3322854,3.8324265,287
+Netherlands,Terneuzen,Terneuzen Dow,By-product,Styrene,Other chemicals,19788.84,,18656.302998096857,51.3332854,3.8324265,288
+Netherlands,Terneuzen,Terneuzen Trinseo,By-product,Styrene,Other chemicals,9889,,9323.041691588785,51.3342854,3.8324265,289
+Netherlands,Vlissingen,Zeeland Total/Lukoil,Reforming,,Refining,129911.01984941814,,118186.57647864075,51.4536672,3.5709125,290
+Norway,Trondheim,ASKO Midt-Norge HRS,Water electrolysis,,Mobility,115.69811320754717,0.7,78.67471698113208,63.3432724721887,10.3733299991462,291
+Norway,Berlevag,HAEOLUS,Water electrolysis,,Unknown,413.20754716981133,2.5,280.98113207547175,70.79904505,29.1505286465325,292
+Norway,Porsgrunn,Heroya Industrial Park ,Water electrolysis,,Unknown,826.4150943396227,5.0,561.9622641509435,59.1212223,9.6305157,293
+Norway,Rafnes,Rafnes INEOS,By-product,Ethylene,Refining,10248.599999999999,,6892.863716814159,59.0908059,9.5933209,294
+Norway,Herre,Rafnes-Stathelle INEOS,By-product,Chlor-alkali,Unknown,8820,,6085.799999999999,59.1043676,9.5579461,295
+Norway,Porsgrunn,Porsgrunn YARA,Reforming,,Ammonia,88776.25,,64806.6625,59.1385567,9.6555147,296
+Norway,Sarpsborg,Sarpsborg Borregaard Industries,By-product,Chlor-alkali,Other chemicals,1120,,772.8,59.2840729,11.1094028,297
+Norway,Sarpsborg,Sarpsborg Borregaard Industries,Reforming,,Other chemicals,1577.9192334017794,,1230.777002053388,59.2850729,11.1094028,298
+Norway,Volden,"Tjelbergodden Equinor, Conoco Phillips",Reforming,,Methanol,124740,,42428.59347489383,60.472024,8.468946,299
+Norway,Mongstad,Mongstad Equinor,Reforming,,Refining,50936.17021276595,,34257.95518734701,60.8030242,5.0232691,300
+Norway,Bremanger,"Bremanger Elkem ASA, Silicon Division",By-product,Chlor-alkali,Unknown,308,,212.51999999999998,61.8445899,4.9774489,301
+Poland,Blachownia,Blachownia Solveco SA,Reforming,,Other chemicals,876,,683.28,50.78505,18.96224,302
+Poland,Bochnia,Bochnia Stalprodukt,Reforming,,Other chemicals,3766.8,,2938.1040000000003,49.9684577,20.4303286,303
+Poland,Brzeg Dolny,Brzeg Dolny Zaklady Chemiczne/PCC Rokita,By-product,Chlor-alkali,Unknown,5208,,3593.5199999999995,51.2728265,16.708557,304
+Poland,Gdansk,Gdansk Grupa Lotos,Reforming,,Refining,168809,,138423.25699999998,54.3520252,18.6466384,305
+Poland,Jedlicze,Jedlicze PKN ORLEN,Reforming,,Refining,58204.90974735714,,47728.02599283285,49.71849,21.64896,306
+Poland,Kedzierzyn,Kedzierzyn Zaklady Azotowe 1,Reforming,,Ammonia,68180.16,,42421.47308254019,50.3373005,18.1813286,307
+Poland,Kedzierzyn,Kedzierzyn Zaklady Azotowe 2,Reforming,,Ammonia,70843.603728,,44078.65907937875,50.3383005,18.1813286,308
+Poland,Kedzierzyn,Kedzierzyn Zaklady Azotowe,Reforming,,Unknown,3723,,2903.94,50.3393005,18.1813286,309
+Poland,Plock,Plock PKN ORLEN,Reforming,,Refining,232836.13978494622,,190925.6346236559,52.5463446,19.7065364,310
+Poland,Police,Police Zaklady Chemiczne,Reforming,,Ammonia,105120,,65405.32099714381,53.5626824187108,14.538638881077,311
+Poland,Pulawy,Pulawy Zaklady Azotowe,Reforming,,Ammonia,214620,,133535.86370250196,51.4164431,21.969309,312
+Poland,Pulawy,Pulawy Zaklady Azotowe,Reforming,,Unknown,3898.2,,3040.596,51.4174431,21.969309,313
+Poland,Tarnow,Tarnow Zaklady Azotowe,By-product,Chlor-alkali,Other chemicals,525.016,,362.2610399999999,50.0121011,20.9858407,314
+Poland,Tarnow,Tarnow Zaklady Azotowe,Reforming,,Ammonia,50602.4625,,31484.687053447797,50.0131011,20.9858407,315
+Poland,Tarnow,Tarnow Zaklady Azotowe,Reforming,,Other chemicals,6237.12,,4864.9536,50.0141011,20.9858407,316
+Poland,Trzebinia,Trzebinia PKN ORLEN,Reforming,,Refining,Unknown,,Unknown,50.15847,19.4694,317
+Poland,Trzebinia,Trzebinia PKN ORLEN,Reforming,,Other chemicals,1576.8,,1229.904,50.15947,19.4694,318
+Poland,Wloclawek,Wloclawek Anwil S.A. (Grupa Orlen),By-product,Chlor-alkali,Other chemicals,5460,,3767.3999999999996,52.6483303,19.0677357,319
+Poland,Wloclawek,Wloclawek Anwil S.A. (Grupa Orlen),Reforming,,Ammonia,92327.3,,57445.744799273176,52.6493303,19.0677357,320
+Poland,Plock,Plock PKN ORLEN,By-product,Ethylene,Refining,11956.699999999999,,9804.493999999999,52.5473446,19.7065364,321
+Portugal,Sines,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,37.9571555,-8.8608907,322
+Portugal,Sines,Unknown,Reforming,,Unknown,Unknown,,Unknown,37.9581555,-8.8608907,323
+Portugal,Povoa de Santa Iria,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,38.8562328,-9.0709315,324
+Portugal,Estarreja,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,40.7538385,-8.5709856,325
+Portugal,Estarreja,Unknown,Reforming,,Unknown,Unknown,,Unknown,40.7548385,-8.5709856,326
+Romania,Navodari,Unknown,Reforming,,Unknown,Unknown,,Unknown,44.341052,28.6455428,327
+Romania,Ploiesti,Unknown,Reforming,,Unknown,Unknown,,Unknown,44.937664,26.0128616,328
+Romania,Ploiesti,Unknown,Reforming,,Unknown,Unknown,,Unknown,44.938664,26.0128616,329
+Romania,Rimnicu-Vilcea,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,45.0996753,24.3693179,330
+Romania,Victoria,Unknown,Reforming,,Unknown,Unknown,,Unknown,45.7306587,24.7009227,331
+Romania,Onesti,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,46.2647012,26.782587,332
+Romania,Targu Mures,Unknown,Reforming,,Unknown,Unknown,,Unknown,46.5385862,24.5514392,333
+Slovakia,Bratislava,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.1485965,17.1077478,334
+Slovakia,Bratislava,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.1505965,17.1077478,335
+Slovakia,Sala,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.1513924,17.8756083,336
+Slovakia,Bratislava,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.1515965,17.1077478,337
+Slovakia,Kosice,Unknown,Reforming,,Unknown,Unknown,,Unknown,48.7163857,21.2610746,338
+Slovakia,Novaky,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,48.7190624,18.5420563,339
+Slovenia,Ljublana,Unknown,Reforming,,Unknown,Unknown,,Unknown,46.0569465,14.5057515,340
+Slovenia,Hrastnik,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,46.1417288,15.0844894,341
+Spain,Lloseta,Green Hysland/Power to Green Hydrogen Mallorca (Phase 1),Water electrolysis,,Mobility,413.20754716981133,2.5,280.98113207547175,39.7034672570424,2.86678438318085,342
+Spain,Barcelona,Zona Franca de Barcelona (HRS) (Phase 1),Water electrolysis,,Mobility,413.20754716981133,2.5,280.981132075472,41.284820822116,1.94665964125671,343
+Spain,Puertollano,H2F (Phase 1),Water electrolysis,,Ammonia,3305.6603773584907,20.0,2247.849056603774,38.6697414650677,-4.06097260030287,344
+Spain,Santa Cruz de Tenerife,Tenerife Biomca Química,By-product,Chlor-alkali,Unknown,140,,96.6,28.4636296,-16.2518467,345
+Spain,Cadiz,San Roque/Algeciras CEPSA,Reforming,,Refining,17520,,14018.202388434946,36.5210142,-6.2804565,346
+Spain,Huelva,Huelva Fertiberia,Reforming,,Ammonia,71021,,43545.85225850343,37.2619585,-6.9427327,347
+Spain,Huelva,Huelva Electroquímica Onubense,By-product,Chlor-alkali,Other chemicals,1232,,850.0799999999999,37.2629585,-6.9427327,348
+Spain,Huelva,Huelva/La Rabida CEPSA,Reforming,,Refining,86261.8273754248,,69020.30562471136,37.2639585,-6.9427327,349
+Spain,Cartagena,Cartagena Linde,Reforming,,Unknown,43334.49112176236,,33800.90307497464,37.6156944,-0.9892242,350
+Spain,Cartagena,Cartagena Repsol,Reforming,,Refining,146000,,125462.91137649276,37.6166944,-0.9892242,351
+Spain,Puertollano,Puertollano Repsol,By-product,Ethylene,Refining,1742.2619999999997,,1394.0286147077306,38.6884458,-4.1078877,352
+Spain,Puertollano,Puertollano Fertiberia,Reforming,,Ammonia,35510.5,,21772.926129251715,38.6894458,-4.1078877,353
+Spain,Puertollano,Puertollano Air Liquide,Reforming,,Refining,38369,,30699.863230672534,38.6904458,-4.1078877,354
+Spain,Puertollano,Puertollano Repsol,Reforming,,Refining,17000,,11726.257546835319,38.6914458,-4.1078877,355
+Spain,Castellon de la Plana,Castellon de la Plana BP,Reforming,,Refining,81904.46481,,65533.86782094908,39.9855905,-0.0496388,356
+Spain,Vila-seca,Vila-seca Ercros,By-product,Chlor-alkali,Other chemicals,4816,,3323.04,41.1093489,1.1400998,357
+Spain,Tarragona,Tarragona Dow,By-product,Ethylene,Other chemicals,11529.675,,9225.189362036454,41.1198827,1.2444909,358
+Spain,Tarragona,Tarragona Repsol,By-product,Ethylene,Refining,11990.861999999997,,9594.19693651791,41.1208827,1.2444909,359
+Spain,Tarragona,Tarragona Repsol,By-product,Styrene,Refining,8900.1,,7878.777049180328,41.1218827,1.2444909,360
+Spain,Tarragona,Tarragona Air Products,Reforming,,Refining,52774,,42225.70164995763,41.1228827,1.2444909,361
+Spain,Tarragona,Tarragona Repsol,Reforming,,Refining,26000,,18924.573224387175,41.1238827,1.2444909,362
+Spain,Monzón,Monzon del Rio Cinca Quimica del Cinca,By-product,Chlor-alkali,Other chemicals,1260,,869.4,41.9157645,0.1928216,363
+Spain,Sabiñánigo,Sabinanigo ENERG.IND.ARAGON,Reforming,,Ammonia,1597.9724999999999,,979.7816758163272,42.5193594,-0.3638114,364
+Spain,Sabiñánigo,Sabiñánigo Ercros,By-product,Chlor-alkali,Unknown,1260,,869.4,42.5203594,-0.3638114,365
+Spain,Sabiñánigo,Sabiñánigo Aragonesas Industrias y Energia SA,By-product,Sodium chlorate,Unknown,2367.9,,1846.9620000000002,42.5213594,-0.3638114,366
+Spain,Bilbao,Muskiz Repsol,Reforming,,Refining,70000,,51867.34883720931,43.2630126,-2.9349852,367
+Spain,Hernani,Hernani Electroquimica de Hernani,By-product,Chlor-alkali,Other chemicals,840,,579.5999999999999,43.2667928,-1.9768497,368
+Spain,Hernani,Hernani Electroquimica de Hernani,By-product,Sodium chlorate,Other chemicals,229.69449999999998,,179.16171,43.2677928,-1.9768497,369
+Spain,Torrelavega,Torrelavega Bondalti Chemicals,By-product,Chlor-alkali,Other chemicals,1904,,1313.76,43.3498503,-4.0501505,370
+Spain,La Coruña,La Coruña Air Liquide,Reforming,,Refining,24528,,19625.483343808923,43.3623436,-8.4115401,371
+Spain,La Coruña,La Coruña Repsol,Reforming,,Refining,24000,,17522.75298554368,43.3633436,-8.4115401,372
+Spain,Gajano,Gajano Air Liquide,Reforming,,Other chemicals,984.8747982218719,,768.2023426130601,43.4106811,-3.777798,373
+Spain,Aviles,Aviles Nippon Gases Europe,Reforming,,Other chemicals,7878.998385774975,,6145.618740904481,43.5589523,-5.9246653,374
+Sweden,Oskarshamn,Oskarshamn electrolyser,Water electrolysis,,Unknown,115.69811320754715,0.7,78.67471698113206,57.4171067562032,16.6726343711793,375
+Sweden,Sandviken,Sandviken ely,Water electrolysis,,Mobility,661.132075471698,4.0,449.5698113207547,60.6119917143679,16.7541014345866,376
+Sweden,Lulea,HYBRIT pilot (Phase 1),Water electrolysis,,Steel,743.7735849056603,4.5,505.76603773584907,65.5831352,22.1460134,377
+Sweden,Alby,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,56.4839689,16.5752319,378
+Sweden,Halmstad,Unknown,Reforming,,Unknown,Unknown,,Unknown,56.6743748,12.8577885,379
+Sweden,Vaxjo,Unknown,Reforming,,Unknown,Unknown,,Unknown,56.8790044,14.8058523,380
+Sweden,Göteborg,Unknown,Reforming,,Unknown,Unknown,,Unknown,57.70887,11.97456,381
+Sweden,Göteborg,Unknown,Reforming,,Unknown,Unknown,,Unknown,57.71087,11.97456,382
+Sweden,Stenungsund,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,58.0678388,11.8294345,383
+Sweden,Stenungsund,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,58.0688388,11.8294345,384
+Sweden,Lysekil,Unknown,Reforming,,Unknown,Unknown,,Unknown,58.275573,11.435558,385
+Sweden,Nynashamm,Unknown,Reforming,,Unknown,Unknown,,Unknown,58.902926,17.9465288,386
+Sweden,Rottneros  ,Unknown,Reforming,,Unknown,Unknown,,Unknown,59.7958694,13.1094255,387
+Sweden,Fagersta,Unknown,Reforming,,Unknown,Unknown,,Unknown,59.989144,15.8166418,388
+Sweden,Hagfors,Unknown,Reforming,,Unknown,Unknown,,Unknown,60.03437,13.694508,389
+Sweden,Krylbo,Unknown,Reforming,,Unknown,Unknown,,Unknown,60.1309558,16.2159444,390
+Sweden,Borlange,Unknown,Reforming,,Unknown,Unknown,,Unknown,60.484304,15.433969,391
+Sweden,Sundsvall,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,62.390811,17.306927,392
+Switzerland,Niedergösgen,Hydrospider Gösgen,Water electrolysis,,Mobility,330.566037735849,2.0,224.78490566037735,47.368553,7.979575,393
+Switzerland,St. Gallen,Wasserstoffproduktion Ostschweiz AG,Water electrolysis,,Mobility,330.566037735849,2.0,224.78490566037735,47.4005800104364,9.32816180963526,394
+Switzerland,Dietikon,PtG Switzerland Dietikon,Water electrolysis,,Blending in natural gas pipelines,413.2075471698113,2.5,280.9811320754717,47.4068827,8.4020894,395
+Switzerland,Monthey,Djeva PtH,Water electrolysis,,Other chemicals,1156.9811320754716,7.0,786.7471698113208,46.2520181964156,6.96077630357466,396
+Switzerland,Visp,Unknown,Reforming,,Unknown,Unknown,,Unknown,46.2947277,7.8821204,397
+Switzerland,Cressier,Unknown,Reforming,,Unknown,Unknown,,Unknown,47.050861,7.0373624,398
+Switzerland,Lenzburg,Unknown,Reforming,,Unknown,Unknown,,Unknown,47.3914443,8.1721545,399
+Switzerland,Pratteln,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,47.5183198,7.6919889,400
+Switzerland,Kaisten,Unknown,Reforming,,Unknown,Unknown,,Unknown,47.54033,8.04439,401
+United Kingdom,Keele,HyDeploy,Water electrolysis,,Blending in natural gas pipelines,82.64150943396226,0.5,56.19622641509434,53.0038078,-2.2877425,402
+United Kingdom,Eday,Surf'n'Turf,Water electrolysis,,Mobility,110.73962264150943,0.67,75.30294339622641,59.1649150969301,-2.78835603880386,403
+United Kingdom,Aberdeen,Aberdeen Kittybrewster HRS,Water electrolysis,,Mobility,165.2830188679245,1.0,112.39245283018867,57.1605931776635,-2.11435923358071,404
+United Kingdom,"Balfour, Shapinsay",BIG HIT,Water electrolysis,,Residential heat,165.2830188679245,1.0,112.39245283018867,59.0347198065152,-2.88815455849537,405
+United Kingdom,Birmingham,Birmingham Tyseley Energy Park HRS,Water electrolysis,,Mobility,495.84905660377353,3.0,337.177358490566,52.4613575909314,-1.84096426182476,406
+United Kingdom,Fawley,Unknown,Reforming,,Unknown,Unknown,,Unknown,50.8268139,-1.3502269,407
+United Kingdom,Wilton,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.079018,-1.862598,408
+United Kingdom,Wilton,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.080018,-1.862598,409
+United Kingdom,Barry,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.3997529,-3.2825859,410
+United Kingdom,Barry,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.4007529,-3.2825859,411
+United Kingdom,Purfleet,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.4867106,0.2433122,412
+United Kingdom,West Thurrock,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,51.4870824,0.2805913,413
+United Kingdom,Margam,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.5467364,-3.7011936,414
+United Kingdom,Newport,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.584151,-2.997664,415
+United Kingdom,Newport,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.585151,-2.997664,416
+United Kingdom,Llanwern,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.589659,-2.914446,417
+United Kingdom,Pembroke,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.6762456,-4.91837,418
+United Kingdom,Llanelli,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.680886,-4.160248,419
+United Kingdom,Clydach,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.694293,-3.898795,420
+United Kingdom,Harwich,Unknown,Reforming,,Unknown,Unknown,,Unknown,51.934731,1.260297,421
+United Kingdom,Thetford,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,52.412856,0.751657,422
+United Kingdom,Chester,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.193392,-2.893075,423
+United Kingdom,Stanlow,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.2766078,-2.8434141,424
+United Kingdom,Runcorn,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,53.342078,-2.729673,425
+United Kingdom,St Helens,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.456307,-2.737095,426
+United Kingdom,South Killingholme,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.630955,-0.265186,427
+United Kingdom,Killingholme,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.639527,-0.2742339,428
+United Kingdom,Castleford,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.723466,-1.345968,429
+United Kingdom,Hull,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.7676236,-0.3274198,430
+United Kingdom,Hull,Unknown,Reforming,,Unknown,Unknown,,Unknown,53.7686236,-0.3274198,431
+United Kingdom,Stockton-on-Tees,Unknown,Reforming,,Unknown,Unknown,,Unknown,54.5704551,-1.3289821,432
+United Kingdom,Billingham,Unknown,Reforming,,Unknown,Unknown,,Unknown,54.612537,-1.290961,433
+United Kingdom,Dalry,Unknown,Reforming,,Unknown,Unknown,,Unknown,55.711116,-4.723153,434
+United Kingdom,Greenock,Unknown,Reforming,,Unknown,Unknown,,Unknown,55.956476,-4.771983,435
+United Kingdom,Grangemouth,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,56.0097152,-3.7227698,436
+United Kingdom,Grangemouth,Unknown,Reforming,,Unknown,Unknown,,Unknown,56.0107152,-3.7227698,437
+United Kingdom,Auchtertool,Unknown,By-product,Unknown,Unknown,Unknown,,Unknown,56.10282,-3.2576839,438
