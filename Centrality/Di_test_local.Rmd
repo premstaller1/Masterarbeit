@@ -6,7 +6,7 @@ date: "2024-05-11"
 
 
 ```{r cars}
-
+#Function location
 bilatDistance <- function(lo, la){ # gives correctly computed bilateral distancs in km
   radj=6371
   la <- 2 * pi * la/360
@@ -19,21 +19,41 @@ bilatDistance <- function(lo, la){ # gives correctly computed bilateral distancs
   dvect <- radj * acos(dvect)
   return(dvect)
 }
- 
-convertXY<- function(lat,lon){
-  R=6371000
-  x = R * (cos(90-lat)* cos(lon))
-  y = R * (cos(90-lat) *sin(lon))
-  ergeb=objects();
-  ergeb$x=x
-  ergeb$y=y
-   
-  return (ergeb)
+
+
+bilatDistance_new <- function(lo, la){ 
+  radj <- 6371
+  la_rad <- 2 * pi * la / 360
+  lo_rad <- 2 * pi * lo / 360
+  coslat <- cos(la_rad)
+  sinlat <- sin(la_rad)
+  
+  # Calculate the differences in longitudes and convert to radians
+  dlon_rad <- outer(lo_rad, lo_rad, "-")
+  
+  # Compute the Haversine formula
+  dvect <- sinlat %o% sinlat + (coslat %o% coslat) * cos(dlon_rad)
+  dvect <- dvect[lower.tri(dvect)]
+  dvect <- ifelse(dvect > 1, 1, dvect)
+  dvect <- radj * acos(dvect)
+  
+  return(dvect)
+}
+
+convertXY <- function(lon, lat) {
+  # Radius of the Earth in kilometers
+  R <- 6371
+  
+  # Convert latitude and longitude to Cartesian coordinates
+  x <- R * cos(lat * pi / 180) * cos(lon * pi / 180)
+  y <- R * cos(lat * pi / 180) * sin(lon * pi / 180)
+  
+  return(data.frame(x = x, y = y))
 }
 
 calcDi<- function(y,x, fun){
   thresh=1 # min distance 
-  dist=bilatDistance(y,x)# calculaution of bilateral distances according to McSpatial
+  dist=bilatDistance_new(y,x)# calculaution of bilateral distances according to McSpatial
   dist[dist<thresh] <-thresh 
   Di=rep(0,length(y))
   pos=1
@@ -61,85 +81,6 @@ calcDi<- function(y,x, fun){
     
   }
   return (Di)
-}
-
-
-getPercentileGlobalConfidenceBand <- function (KDEValues,esp, maxNumb,numIter, startPercentile, percentileStep, upperOrLower){
-  counter=0
-  observedNumb=maxNumb+1
-  while(observedNumb>maxNumb){
-    bound=vector();
-    counter=counter+1
-    for(i in 1:esp){
-      if(upperOrLower=="lower"){
-        percentile=startPercentile-(counter*percentileStep)
-      }
-      else{
-        percentile=startPercentile+(counter*percentileStep)
-      } 
-      quantiles <- quantile(KDEValues[,i], percentile)  
-      bound=append(bound,quantiles[[1]])
-    }
-    observedNumb=0
-    for(i in 1:numIter){# WIe oft wird der Bound getroffen
-      iter=KDEValues[i,]
-      if(upperOrLower=="lower"){
-        if(sum(iter<bound)>=1){ # Bound wurden an mindestens einer Stelle getroffen
-          observedNumb=observedNumb+1
-        }
-      }
-      else{
-        if(sum(iter>bound)>=1){ # Bound wurden an mindestens einer Stelle getroffen
-          observedNumb=observedNumb+1
-        }
-      }
-    }
-    print(paste("Percenetik:",percentile, " Treffer: ",observedNumb))
-  }
-  ergeb=objects();
-  ergeb$bound=bound;
-  ergeb$percentile=percentile
-  return (ergeb)
-}
-globalConfidenceBand <- function (KDEValues,esp, thresh){
-  numIter=length(KDEValues[,1])
-  maxNumb=(thresh/100)*numIter
-  print(maxNumb)
-  
-  #Calclulation of lower Bound at 1 % Steps
-  lowerBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, 0.05, 0.01, "lower")
-  #Calclulation of lower Bound at 0.1 % Steps
-  start=lowerBoundCalc$percentile+0.01 # set last position
-  lowerBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, start, 0.001, "lower")
-  
-  #Calclulation of upper Bound at 1 % Steps
-  upperBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, 0.95, 0.01, "upper")
-  #Calclulation of upper Bound at 0.1 % Steps
-  start=upperBoundCalc$percentile-0.01 # set last position
-  upperBoundCalc=getPercentileGlobalConfidenceBand(KDEValues,esp, maxNumb,numIter, start, 0.001, "upper")
-  
-  ergeb=objects(); # ergeb means result in German ;)
-  ergeb$lowerBound=lowerBoundCalc$bound
-  ergeb$upperBound=upperBoundCalc$bound
-  ergeb$KDEValues=KDEValues
-  return (ergeb)
-}  
-
-
-
-# calculate local confidence Bands ( not used in Paper)
-localConfidenceBand <- function (KDEValues,esp){
-  lowerBound=vector();
-  upperBound=vector();
-  for(i in 1:esp){
-    quantiles <- quantile(KDEValues[,i], c(.05,.95))  
-    lowerBound=append(lowerBound,quantiles[[1]])
-    upperBound=append(upperBound,quantiles[[2]])
-  }
-  ergeb=objects();
-  ergeb$lowerBound=lowerBound
-  ergeb$upperBound=upperBound
-  return (ergeb)
 }
 
 #####  Global Values  ###################################################################################################
@@ -199,9 +140,24 @@ globalValues<- function (kdeObs, kdeBench, obs_lat, obs_lon){
   return (ergeb)
 }
 
+# Function to remove the last 3 digits after the decimal point
+remove_last_three_digits <- function(x) {
+  # Convert the number to a string
+  x_str <- as.character(x)
+  # Find the position of the decimal point
+  decimal_pos <- regexpr("\\.", x_str)[1]
+  # Determine the cutoff position (3 digits after the decimal point)
+  cutoff_pos <- decimal_pos + 10
+  # Remove the characters after the cutoff position
+  truncated_str <- substr(x_str, 1, cutoff_pos)
+  # Convert back to numeric
+  truncated_val <- as.numeric(truncated_str)
+  return(truncated_val)
+}
+
 ```
 
-## Including Plots
+## Download packages
 ```{r}
 #dependencies
 
@@ -212,8 +168,118 @@ install.packages("oce")
 install.packages("sp")
 install.packages("rgdal")    
 install.packages("raster")
+install.packages("sp")
+install.packages("ggplot2")
+install.packages("ggfortify")
+install.packages(c("sf", "rnaturalearth", "rnaturalearthdata"))
 
 ```
+```{r}
+#load libraries
+
+library(dplyr)
+library("readxl")
+library(oce)
+library(sp)
+library(dbmss)
+```
+
+
+#New code!
+```{r}
+#loading data
+
+locations_industry <- read_excel("data/locations_hydro_V10.xlsx")
+locations_bench <- read_excel("data/amadeus_benchmark_V4.xlsx")
+
+# Add 'PointType' column to locations_industry
+locations_industry <- locations_industry %>%
+  mutate(PointType = "INDUSTRY")
+
+# Add 'PointType' column to locations_bench
+locations_bench <- locations_bench %>%
+  mutate(PointType = "BENCH")
+```
+```{r}
+# Extract latitude and longitude values
+industry_lat <- locations_industry$Lat
+industry_lon <- locations_industry$Lon
+
+bench_lat <- locations_bench$Lat
+bench_lon <- locations_bench$Lon
+```
+
+```{r}
+#Convert to X and Y for later. X is lat and Y is Lon
+
+xy_industry <- convertXY(industry_lon, industry_lat)
+xy_bench <- convertXY(bench_lon, bench_lat)
+```
+
+```{r}
+#Prepare datasets for the next steps - create datasets with pointtype in the df etc.
+
+# Combine the data frames by rows (bind_rows)
+combined_df_lonlat <- bind_rows(select(locations_industry, Lat, Lon, PointType),
+                                select(locations_bench, Lat, Lon, PointType))
+
+# Rename columns 'Lat' to 'x' and 'Lon' to 'y'
+combined_df <- combined_df_lonlat %>%
+  rename(x = Lat, y = Lon)
+
+# Print the resulting data frame
+print(combined_df)
+
+```
+
+```{r}
+
+xy_industry_df <- data.frame(xy_industry)
+xy_bench_df <- data.frame(xy_bench)
+
+# Add 'PointType' column to xy_industry
+xy_industry_df <- xy_industry_df %>%
+  mutate(PointType = "INDUSTRY")
+
+# Add 'PointType' column to bench
+xy_bench_df <- xy_bench_df %>%
+  mutate(PointType = "BENCH")
+
+# Combine the data frames by rows (bind_rows)
+# Combine the selected columns by rows (bind_rows)
+combined_df_xy <- bind_rows(select(xy_bench_df, x, y, PointType),
+                          select(xy_industry_df, x, y, PointType))
+
+# Display the combined data frame
+print(combined_df_xy)
+```
+#working with the dbmss library to calculate relative and absolute indexes
+
+#startin with the creation of a wmppp
+
+```{r}
+X <- wmppp(data.frame(X = combined_df_xy$x, Y = combined_df_xy$y, PointType = combined_df_xy$PointType))
+X
+```
+#wmppp is created, now the analysis can begin
+#startin with k(d) function by D&O:
+
+```{r}
+KdE <- KdEnvelope(
+  X, 
+  r = seq(0, 10000, 10), 
+  NumberOfSimulations = 100, 
+  ReferenceType = "BENCH", 
+  Global = TRUE
+)
+autoplot(KdE, main = "")
+```
+
+
+
+#Old Code #####################################################################################################
+
+
 ```{r}
 locations_industry <- read_excel("data/locations_hydro_V10.xlsx")
 locations_bench <- read_excel("data/amadeus_benchmark_V4.xlsx")
@@ -270,8 +336,6 @@ print(concentration_df)
 write.csv(concentration_df, "concentration_locations.csv", row.names = FALSE)
 ```
 
-
-
 ```{r pressure, echo=FALSE}
 library("readxl")
 library(oce)
@@ -288,10 +352,16 @@ industry_lon <- locations_industry$Lon
 bench_lat <- locations_bench$Lat
 bench_lon <- locations_bench$Lon
 
-xy_industry <- convertXY(industry_lat, industry_lon)
-xy_bench <- convertXY(locations_bench$Lat, locations_bench$Lon)
+# Convert character vectors to numeric
+industry_lat <- as.numeric(industry_lat)
+industry_lon <- as.numeric(industry_lon)
+
+# Now you can use the convertXY_new function
+xy_industry <- convertXY(industry_lon, industry_lat)
+xy_bench <- convertXY(locations_bench$Lon, locations_bench$Lat)
 
 ```
+
 #going forward with the DiDistance
 
 ```{r}
@@ -299,8 +369,6 @@ di_industry <- calcDi(locations_industry$Lon, locations_industry$Lat, fun = "inv
 di_bench <- calcDi(locations_bench$Lon, locations_bench$Lat, fun = "invert")
 
 ```
-
-
 
 ```{r}
 
@@ -333,55 +401,58 @@ x
 
 ```
 
-
-```{r}
-# Load required libraries
-x <- globalValues(industry_density, bench_density)
-
-```
-
-
-
-
-
 ```{r}
 library(dplyr)
 
+
+# Function to remove the last 3 digits after the decimal point
+remove_last_three_digits <- function(x) {
+  # Convert the number to a string
+  x_str <- as.character(x)
+  # Find the position of the decimal point
+  decimal_pos <- regexpr("\\.", x_str)[1]
+  # Determine the cutoff position (3 digits after the decimal point)
+  cutoff_pos <- decimal_pos + 10
+  # Remove the characters after the cutoff position
+  truncated_str <- substr(x_str, 1, cutoff_pos)
+  # Convert back to numeric
+  truncated_val <- as.numeric(truncated_str)
+  return(truncated_val)
+}
+
+# Assuming 'locations_industry' and 'locations_bench' are your data frames
 # Add 'PointType' column to locations_industry
 locations_industry <- locations_industry %>%
   mutate(PointType = "INDUSTRY")
 
-# Add 'PointType' column to bench
+# Add 'PointType' column to locations_bench
 locations_bench <- locations_bench %>%
   mutate(PointType = "BENCH")
 
 # Combine the data frames by rows (bind_rows)
-# Combine the selected columns by rows (bind_rows)
 combined_df_lonlat <- bind_rows(select(locations_industry, Lat, Lon, PointType),
-                          select(locations_bench, Lat, Lon, PointType))
-# Assuming 'combined_df_lonlat' has columns 'Lat', 'Lon', and 'PointType'
+                                select(locations_bench, Lat, Lon, PointType))
+
+# Apply the truncation function to 'Lat' and 'Lon' columns
+combined_df_lonlat <- combined_df_lonlat %>%
+  mutate(across(c(Lat, Lon), remove_last_three_digits))
+
+# Rename columns 'Lat' to 'x' and 'Lon' to 'y'
 combined_df_xy <- combined_df_lonlat %>%
-  rename(x = Lat,
-         y = Lon)
+  rename(x = Lat, y = Lon)
 
-combined_df_xy
+# Print the resulting data frame
+print(combined_df_xy)
 
-# Function to convert long coordinates to a readable format
-convert_coordinates <- function(data) {
-  data$x <- data$x / 100
-  data$y <- data$y / 100
-  return(data)
-}
-
-# Convert coordinates
-shortened_data <- convert_coordinates(combined_df_xy)
-
-# Print the shortened data
-print(shortened_data)
+xy_combined <- convertXY(combined_df_xy$y, combined_df_xy$x)
+xy_combined <- cbind(xy_combined, PointType = combined_df_xy$PointType)
+xy_combined
 
 ```
 
 ```{r}
+library(dplyr)
+
 xy_industry_df <- data.frame(xy_industry)
 xy_bench_df <- data.frame(xy_bench)
 
@@ -405,20 +476,18 @@ print(combined_df)
 ```{r}
 library(dbmss)
  
-X <- wmppp(combined_df)
-
-KdE <- KdEnvelope(
-  X, 
-  NumberOfSimulations = 100, 
-  ReferenceType = "INDUSTRY", 
-  Global = TRUE
-)
-autoplot(KdE, ,main = "")
+X <- wmppp(combined_df_xy)
 ```
 
+
 ```{r}
-install.packages("ggplot2")
-install.packages("ggfortify")
+KdE <- KdEnvelope(
+  X,
+  NumberOfSimulations = 100, 
+  ReferenceType = "INDUSTRY",
+  Global = FALSE
+)
+autoplot(KdE, ,main = "")
 ```
 
 
@@ -438,12 +507,29 @@ autoplot(Envelope, main = "", ylim = c(0, 20))
 
 
 ```{r}
-autoplot(X)
+# Install necessary packages if not already installed
+
+# Load the packages
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+
+# Convert your data to an sf object
+X_sf <- st_as_sf(locations_industry, coords = c("Lon", "Lat"), crs = 4326)
+
+# Get map data for Europe
+europe_map <- ne_countries(scale = "medium", returnclass = "sf", continent = "Europe")
+
+# Create the plot
+ggplot(data = europe_map) +
+  geom_sf(fill = "lightgray", color = "white") +
+  geom_sf(data = X_sf, aes(color = PointType), size = 3) +
+  coord_sf(xlim = c(-10, 40), ylim = c(35, 70), expand = FALSE) +  # Zoom in on Europe
+  theme_minimal() +
+  labs(title = "Spatial Data in Europe", color = "Point Type") +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.position = "bottom"
+  )
+
 ```
-
-```{r}
-confidence_bands$lowerBound
-```
-
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
