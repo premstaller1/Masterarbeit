@@ -17,6 +17,7 @@ bilatDistance <- function(lo, la){ # gives correctly computed bilateral distancs
   dvect <- dvect[lower.tri(dvect)]
   dvect <- ifelse(dvect > 1, 1, dvect)
   dvect <- radj * acos(dvect)
+  print(dvect)
   return(dvect)
 }
 
@@ -36,7 +37,7 @@ bilatDistance_new <- function(lo, la){
   dvect <- dvect[lower.tri(dvect)]
   dvect <- ifelse(dvect > 1, 1, dvect)
   dvect <- radj * acos(dvect)
-  
+  print(dvect)
   return(dvect)
 }
 
@@ -86,8 +87,8 @@ calcDi<- function(y,x, fun){
 #####  Global Values  ###################################################################################################
 
 # function is used to calculate global dispersion or concentration 
-# needs the calculated Di values of the observes industry and the bechmark
-globalValues<- function (kdeObs, kdeBench, obs_lat, obs_lon){
+# needs the calculated Di values of the observes industry and the benchmark
+globalValues<- function (kdeObs, kdeBench, obs_lat, obs_lon, location_name){
   #calculate the median value of Benchmark
   meanIntegral=0
   i=1
@@ -105,6 +106,7 @@ globalValues<- function (kdeObs, kdeBench, obs_lat, obs_lon){
   print(myMean)
   concentration_lat <- c() # To store latitudes of concentration
   concentration_lon <- c() # To store longitudes of concentration
+  concentration_name <- c() # To store names of concentration locations
   for(i in 1:(length(kdeObs$y)-1)){
     
     if(kdeObs$y[i]>kdeBench$y[i] && kdeObs$y[(i+1)]>kdeBench$y[(i+1)]){
@@ -118,14 +120,14 @@ globalValues<- function (kdeObs, kdeBench, obs_lat, obs_lon){
       integral=integralObs-integralBench
       if(kdeBench$x[i]< myMean){#Dispersion      
         omega=omega+integral
-        print(paste("Dispersion an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
       }
       else{#Concentration
         theta=theta+integral
         concentration_lat <- c(concentration_lat, obs_lat[i])
         concentration_lon <- c(concentration_lon, obs_lon[i])
+        concentration_name <- c(concentration_name, location_name[i])
 
-        print(paste("Konzentration an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
+        print(location_name[i])
       }
     }
   }
@@ -136,6 +138,7 @@ globalValues<- function (kdeObs, kdeBench, obs_lat, obs_lon){
   ergeb$myMean=myMean
   ergeb$concentration_lat <- concentration_lat
   ergeb$concentration_lon <- concentration_lon
+  ergeb$location_name <- concentration_name
   
   return (ergeb)
 }
@@ -267,14 +270,52 @@ X
 ```{r}
 KdE <- KdEnvelope(
   X, 
-  r = seq(0, 10000, 10), 
+  r = seq(0, 3000, 10), 
   NumberOfSimulations = 100, 
-  ReferenceType = "BENCH", 
-  Global = TRUE
+  ReferenceType = "INDUSTRY", 
+  Global = TRUE,
+  Original = FALSE,
+  
 )
-autoplot(KdE, main = "")
+p <- autoplot(KdE, main = "")
+
+ggsave(plot = p, filename = "kde_plot.png", device = "png")
 ```
 
+
+```{r}
+KdE <- KdEnvelope(
+  X, 
+  r = seq(0, 1000, 10), 
+  NumberOfSimulations = 100, 
+  ReferenceType = "INDUSTRY", 
+  Global = TRUE,
+  Original = FALSE,
+  
+)
+p <- autoplot(KdE, main = "")
+
+ggsave(plot = p, filename = "kde_plot_1000.png", device = "png")
+```
+
+
+
+```{r}
+Envelope <- MEnvelope(
+  X, 
+  r = seq(0, 1300, 10), 
+  NumberOfSimulations = 100,
+  Alpha = 0.05, 
+  ReferenceType = "INDUSTRY",
+  NeighborType = "BENCH",
+  CaseControl = TRUE,
+  SimulationType = "RandomLabeling", 
+  Global = TRUE
+)
+p <- autoplot(Envelope, main = "")
+
+ggsave(plot = p, filename = "M_plot.png", device = "png")
+```
 
 
 #Old Code #####################################################################################################
@@ -311,17 +352,35 @@ library(stats)
 industry_density <- density(di_industry, n = 500)
 bench_density <- density(di_bench, n = 500)
 
+# Set the file name and path for saving the image
+file_name <- "density_plot.png"
+file_path <- "data/"
+
+# Combine file path and name
+file <- paste0(file_path, file_name)
+
+# Start recording the plot as a PNG file
+png(file)
+
 # Plot the densities
 plot(bench_density, main = "Density of Di Values", xlab = "Di Values", ylab = "Density")
 lines(industry_density, lty = 2)
 legend("topright", legend = c("Bench", "Industry"), lty = c(1, 2), col = c("black", "black"))
 
-# Calculate global values and concentrations
-result <- globalValues(industry_density, bench_density, industry_lat, industry_lon)
+# Stop recording and close the connection
+dev.off())
 
-# Print the list of concentration locations
-print(result$concentration_locations)
+# Calculate global values and concentrations
+result <- globalValues(industry_density, bench_density, industry_lat, industry_lon, locations_industry$Name)
+
+print(result)
 ```
+```{r}
+di_industry
+di_bench
+```
+
+
 ```{r}
 # Combine the latitudes and longitudes into a data frame
 concentration_df <- data.frame(
