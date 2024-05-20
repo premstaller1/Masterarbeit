@@ -113,11 +113,9 @@ globalValues<- function (kdeObs, kdeBench){
       integral=integralObs-integralBench
       if(kdeBench$x[i]< myMean){#Dispersion      
         omega=omega+integral
-        #print(paste("Dispersion an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
       }
       else{#Concentration
         theta=theta+integral
-        #print(paste("Konzentration an der Stelle",kdeObs$x[i],"mit Wert",kdeObs$y[i],"zu",kdeBench$y[i], "ergibt:",integral, sep=" "))
       }
     }
   }
@@ -143,53 +141,6 @@ remove_last_three_digits <- function(x) {
   # Convert back to numeric
   truncated_val <- as.numeric(truncated_str)
   return(truncated_val)
-}
-
-globalValues_new <- function(kdeObs, kdeBench, obsData, benchData) {
-  # Calculate the median value of Benchmark
-  meanIntegral <- 0
-  i <- 1
-  while (meanIntegral < 0.5) {
-    maxb <- max(kdeBench$y[i], kdeBench$y[i + 1])
-    d <- abs(kdeBench$y[i] - kdeBench$y[i + 1])
-    c <- kdeBench$x[i + 1] - kdeBench$x[i]
-    integral <- maxb * c - (0.5 * (c * d))
-    meanIntegral <- meanIntegral + integral
-    i <- i + 1
-  }
-  myMean <- kdeBench$x[i]
-  omega <- 0
-  theta <- 0
-  concentratedCompanies <- list()
-
-  for (i in 1:(length(kdeObs$y) - 1)) {
-    if (kdeObs$y[i] > kdeBench$y[i] && kdeObs$y[i + 1] > kdeBench$y[i + 1]) {
-      maxbObs <- max(kdeObs$y[i], kdeObs$y[i + 1])
-      maxbBench <- max(kdeBench$y[i], kdeBench$y[i + 1])
-      dObs <- abs(kdeObs$y[i] - kdeObs$y[i + 1])
-      dBench <- abs(kdeBench$y[i] - kdeBench$y[i + 1])
-      c <- kdeObs$x[i + 1] - kdeObs$x[i]
-      integralObs <- maxbObs * c - (0.5 * (c * dObs))
-      integralBench <- maxbBench * c - (0.5 * (c * dBench))
-      integral <- integralObs - integralBench
-      if (kdeBench$x[i] < myMean) { # Dispersion
-        omega <- omega + integral
-      } else { # Concentration
-        theta <- theta + integral
-        # Add company data to the concentratedCompanies list
-        concentratedCompanies <- append(concentratedCompanies, list(list(name = obsData$name[i], lat = obsData$lat[i], lon = obsData$lon[i])))
-      }
-    }
-  }
-  
-  ergeb <- list()
-  ergeb$theta <- theta
-  ergeb$omega <- omega
-  ergeb$delta <- theta - omega
-  ergeb$myMean <- myMean
-  ergeb$concentratedCompanies <- concentratedCompanies
-  
-  return(ergeb)
 }
 
 ```
@@ -394,92 +345,28 @@ png(file)
 plot(bench_density, main = "Density of Di Values", xlab = "Di Values", ylab = "Density")
 lines(industry_density, lty = 2)
 legend("topright", legend = c("Bench", "Industry"), lty = c(1, 2), col = c("black", "black"))
+# Close the PNG device
+dev.off()
 
 # Calculate global values and concentrations
 result <- globalValues(industry_density, bench_density)
 
 print(result)
 
-# Prepare data for passing to the function
-obsData <- data.frame(name = locations_industry$Name, lat = industry_lat, lon = industry_lon)
-benchData <- data.frame(name = locations_bench$Name, lat = bench_lat, lon = bench_lon)
-# Close the PNG device
-dev.off()
-
-# Calculate global values and concentrations
-result <- globalValues_new(industry_density, bench_density, obsData, benchData)
-
-print(result)
-```
-
-
-```{r}
-concentrated_companies <- do.call(rbind, lapply(result$concentratedCompanies, as.data.frame))
-write.csv(concentrated_companies, file = "concentrated_companies.csv", row.names = FALSE)
-```
-
-
-#Test
-
-```{r}
-
-library("readxl")
-library(oce)
-library(sp)
-
-locations_industry <- read_excel("data/ind_com.xlsx")
-locations_bench <- read_excel("data/bench_com.xlsx")
-
-# Extract latitude and longitude values
-industry_lat <- locations_industry$Lat
-industry_lon <- locations_industry$Lon
-
-bench_lat <- locations_bench$Lat
-bench_lon <- locations_bench$Lon
-
-xy_industry <- convertXY(industry_lat, industry_lon)
-xy_bench <- convertXY(bench_lat, bench_lon)
-
-# Calculate Di values
-di_industry <- calcDi(industry_lon, industry_lat, fun = "invert")
-di_bench <- calcDi(bench_lon, bench_lat, fun = "invert")
-
-# Perform statistical tests
-ks_test_result <- ks.test(di_industry, di_bench)
-print(ks_test_result)
-
-mann_whitney_result <- wilcox.test(di_industry, di_bench, alternative = "two.sided")
-print(mann_whitney_result)
-
-# Kernel Density Estimation and Comparison
-library(stats)
-
-industry_density <- density(di_industry, n = 500)
-bench_density <- density(di_bench, n = 500)
-
-# Plot the densities
-plot(bench_density, main = "Density of Di Values", xlab = "Di Values", ylab = "Density")
-lines(industry_density, lty = 2)
-legend("topright", legend = c("Bench", "Industry"), lty = c(1, 2), col = c("black", "black"))
-
-# Calculate global values and concentrations
-result <- globalValues(industry_density, bench_density, industry_lat, industry_lon)
-
-# Print the list of concentration locations
-print(result$concentration_locations)
 ```
 
 ```{r}
-# Combine the latitudes and longitudes into a data frame
-concentration_df <- data.frame(
-  Latitude = result$concentration_lat,
-  Longitude = result$concentration_lon
-)
+# Detect firms in the first quartile of Di values
+first_quartile_threshold <- quantile(di_industry, 0.90)
+firms_in_first_quartile <- locations_industry[di_industry <= first_quartile_threshold, ]
 
-# Print the concentration data frame
-print(concentration_df)
+# Save firms in the first quartile to CSV
+write.csv(firms_in_first_quartile, file = "firms_in_first_quartile.csv", row.names = FALSE)
 
-# Write the data frame to a CSV file
-write.csv(concentration_df, "concentration_locations.csv", row.names = FALSE)
+# Detect firms above the 95th percentile of benchmark distribution
+percentile_95_bench <- quantile(di_bench, 0.95)
+firms_above_95_percentile <- locations_industry[di_industry > percentile_95_bench, ]
+
+# Save firms above the 95th percentile to CSV
+write.csv(firms_above_95_percentile, file = "firms_above_95_percentile.csv", row.names = FALSE)
 ```
-
