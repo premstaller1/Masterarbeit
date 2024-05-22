@@ -3,7 +3,22 @@ title: "DiTest_Local"
 output: html_document
 date: "2024-05-11"
 ---
+```{r}
+#dependencies
 
+install.packages("readxl")
+install.packages("dbmss")
+install.packages("dplyr")
+install.packages("oce")
+install.packages("sp")
+install.packages("rgdal")    
+install.packages("raster")
+install.packages("sp")
+install.packages("ggplot2")
+install.packages("ggfortify")
+install.packages(c("sf", "rnaturalearth", "rnaturalearthdata"))
+
+```
 
 ```{r cars}
 #Function location
@@ -146,22 +161,7 @@ remove_last_three_digits <- function(x) {
 ```
 
 ## Download packages
-```{r}
-#dependencies
 
-install.packages("readxl")
-install.packages("dbmss")
-install.packages("dplyr")
-install.packages("oce")
-install.packages("sp")
-install.packages("rgdal")    
-install.packages("raster")
-install.packages("sp")
-install.packages("ggplot2")
-install.packages("ggfortify")
-install.packages(c("sf", "rnaturalearth", "rnaturalearthdata"))
-
-```
 ```{r}
 #load libraries
 
@@ -357,16 +357,17 @@ print(result)
 
 ```{r}
 # Detect firms in the first quartile of Di values
-first_quartile_threshold <- quantile(di_industry, 0.90)
-firms_in_first_quartile <- locations_industry[di_industry <= first_quartile_threshold, ]
-
+first_quartile_threshold <- quantile(di_industry, 0.80)
+first_quartile_threshold
+firms_in_first_quartile <- locations_industry[di_industry >= first_quartile_threshold, ]
+firms_in_first_quartile
 # Save firms in the first quartile to CSV
-write.csv(firms_in_first_quartile, file = "firms_in_first_quartile.csv", row.names = FALSE)
+write.csv(firms_in_first_quartile, file = "firms_top_20.csv", row.names = FALSE)
 
 # Detect firms above the 95th percentile of benchmark distribution
-percentile_95_bench <- quantile(di_bench, 0.95)
+percentile_95_bench <- quantile(di_bench, 0.90)
 firms_above_95_percentile <- locations_industry[di_industry > percentile_95_bench, ]
 
 # Save firms above the 95th percentile to CSV
-write.csv(firms_above_95_percentile, file = "firms_above_95_percentile.csv", row.names = FALSE)
+write.csv(firms_above_95_percentile, file = "firms_above_90_percentile.csv", row.names = FALSE)
 ```
