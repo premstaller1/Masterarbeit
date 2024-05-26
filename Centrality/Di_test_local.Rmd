@@ -170,6 +170,7 @@ library("readxl")
 library(oce)
 library(sp)
 library(dbmss)
+library(ggplot2)
 ```
 
 
@@ -357,7 +358,7 @@ print(result)
 
 ```{r}
 # Detect firms in the first quartile of Di values
-first_quartile_threshold <- quantile(di_industry, 0.80)
+first_quartile_threshold <- quantile(di_industry, 0.95)
 first_quartile_threshold
 firms_in_first_quartile <- locations_industry[di_industry >= first_quartile_threshold, ]
 firms_in_first_quartile
