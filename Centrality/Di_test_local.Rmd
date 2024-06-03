@@ -357,18 +357,25 @@ print(result)
 ```
 
 ```{r}
-# Detect firms in the first quartile of Di values
+# Detect firms in the first 5% of Di values
 first_quartile_threshold <- quantile(di_industry, 0.95)
 first_quartile_threshold
-firms_in_first_quartile <- locations_industry[di_industry >= first_quartile_threshold, ]
-firms_in_first_quartile
+firms_5 <- locations_industry[di_industry >= first_quartile_threshold, ]
+firms_5
 # Save firms in the first quartile to CSV
-write.csv(firms_in_first_quartile, file = "firms_top_20.csv", row.names = FALSE)
+write.csv(firms_5, file = "firms_top_5.csv", row.names = FALSE)
 
-# Detect firms above the 95th percentile of benchmark distribution
-percentile_95_bench <- quantile(di_bench, 0.90)
-firms_above_95_percentile <- locations_industry[di_industry > percentile_95_bench, ]
+# Detect firms above the 90th percentile of benchmark distribution
+percentile_95_bench <- quantile(di_industry, 0.90)
+firms_10 <- locations_industry[di_industry > percentile_95_bench, ]
 
-# Save firms above the 95th percentile to CSV
-write.csv(firms_above_95_percentile, file = "firms_above_90_percentile.csv", row.names = FALSE)
+# Save firms above the 90th percentile to CSV
+write.csv(firms_10, file = "firms_top10.csv", row.names = FALSE)
+
+# Detect firms above the 80th percentile of benchmark distribution
+percentile_95_bench <- quantile(di_industry, 0.90)
+firms_20 <- locations_industry[di_industry > percentile_95_bench, ]
+
+# Save firms above the 80th percentile to CSV
+write.csv(firms_20, file = "firms_top20.csv", row.names = FALSE)
 ```
