@@ -366,16 +366,23 @@ firms_5
 write.csv(firms_5, file = "firms_top_5.csv", row.names = FALSE)
 
 # Detect firms above the 90th percentile of benchmark distribution
-percentile_95_bench <- quantile(di_industry, 0.90)
-firms_10 <- locations_industry[di_industry > percentile_95_bench, ]
+percentile_10_bench <- quantile(di_industry, 0.90)
+firms_10 <- locations_industry[di_industry > percentile_10_bench, ]
 
 # Save firms above the 90th percentile to CSV
 write.csv(firms_10, file = "firms_top10.csv", row.names = FALSE)
 
 # Detect firms above the 80th percentile of benchmark distribution
-percentile_95_bench <- quantile(di_industry, 0.90)
-firms_20 <- locations_industry[di_industry > percentile_95_bench, ]
+percentile_20_bench <- quantile(di_industry, 0.80)
+firms_20 <- locations_industry[di_industry > percentile_20_bench, ]
 
 # Save firms above the 80th percentile to CSV
 write.csv(firms_20, file = "firms_top20.csv", row.names = FALSE)
+
+# Detect firms above the 70th percentile of benchmark distribution
+percentile_30_bench <- quantile(di_industry, 0.30)
+firms_30 <- locations_industry[di_industry > percentile_30_bench, ]
+
+# Save firms above the 80th percentile to CSV
+write.csv(firms_20, file = "firms_top30.csv", row.names = FALSE)
 ```
