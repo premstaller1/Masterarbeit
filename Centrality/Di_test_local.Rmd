@@ -255,7 +255,7 @@ X
 #startin with k(d) function by D&O:
 
 ```{r}
-KdE <- KdEnvelope(
+KdE1 <- KdEnvelope(
   X, 
   r = seq(0, 3000, 10), 
   NumberOfSimulations = 100, 
@@ -264,14 +264,14 @@ KdE <- KdEnvelope(
   Original = FALSE,
   
 )
-p <- autoplot(KdE, main = "")
+p1 <- autoplot(KdE1, main = "")
 
 ggsave(plot = p, filename = "kde_plot.png", device = "png")
 ```
 
 
 ```{r}
-KdE <- KdEnvelope(
+KdE2 <- KdEnvelope(
   X, 
   r = seq(0, 1000, 10), 
   NumberOfSimulations = 100, 
@@ -280,7 +280,7 @@ KdE <- KdEnvelope(
   Original = FALSE,
   
 )
-p <- autoplot(KdE, main = "")
+p2 <- autoplot(KdE2, main = "")
 
 ggsave(plot = p, filename = "kde_plot_1000.png", device = "png")
 ```
@@ -299,7 +299,7 @@ Envelope <- MEnvelope(
   SimulationType = "RandomLabeling", 
   Global = TRUE
 )
-p <- autoplot(Envelope, main = "")
+p3 <- autoplot(Envelope, main = "")
 
 ggsave(plot = p, filename = "M_plot.png", device = "png")
 ```
@@ -380,9 +380,20 @@ firms_20 <- locations_industry[di_industry > percentile_20_bench, ]
 write.csv(firms_20, file = "firms_top20.csv", row.names = FALSE)
 
 # Detect firms above the 70th percentile of benchmark distribution
-percentile_30_bench <- quantile(di_industry, 0.30)
+percentile_30_bench <- quantile(di_industry, 0.70)
 firms_30 <- locations_industry[di_industry > percentile_30_bench, ]
 
 # Save firms above the 80th percentile to CSV
-write.csv(firms_20, file = "firms_top30.csv", row.names = FALSE)
+write.csv(firms_30, file = "firms_top30.csv", row.names = FALSE)
 ```
+
+```{r}
+library(gridExtra)
+
+# Combine the plots into one image
+combined_plot <- grid.arrange(p1, p2, p3)
+
+# Save the combined plot to a file
+ggsave(plot = combined_plot, filename = "combined_plot.png", device = "png")
+```
+
