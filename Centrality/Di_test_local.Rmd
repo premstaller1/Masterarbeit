@@ -258,7 +258,7 @@ X
 KdE1 <- KdEnvelope(
   X, 
   r = seq(0, 3000, 10), 
-  NumberOfSimulations = 100, 
+  NumberOfSimulations = 1000, 
   ReferenceType = "INDUSTRY", 
   Global = TRUE,
   Original = FALSE,
@@ -266,7 +266,7 @@ KdE1 <- KdEnvelope(
 )
 p1 <- autoplot(KdE1, main = "")
 
-ggsave(plot = p, filename = "kde_plot.png", device = "png")
+ggsave(plot = p1, filename = "kde_plot.png", device = "png")
 ```
 
 
@@ -282,7 +282,7 @@ KdE2 <- KdEnvelope(
 )
 p2 <- autoplot(KdE2, main = "")
 
-ggsave(plot = p, filename = "kde_plot_1000.png", device = "png")
+ggsave(plot = p2, filename = "kde_plot_1000.png", device = "png")
 ```
 
 
@@ -301,7 +301,7 @@ Envelope <- MEnvelope(
 )
 p3 <- autoplot(Envelope, main = "")
 
-ggsave(plot = p, filename = "M_plot.png", device = "png")
+ggsave(plot = p3, filename = "M_plot.png", device = "png")
 ```
 
 ```{r}
