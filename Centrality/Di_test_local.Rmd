@@ -188,6 +188,11 @@ locations_industry <- locations_industry %>%
 # Add 'PointType' column to locations_bench
 locations_bench <- locations_bench %>%
   mutate(PointType = "BENCH")
+
+locations_industry$Lat <- as.numeric(locations_industry$Lat)
+locations_industry$Lon <- as.numeric(locations_industry$Lon)
+locations_bench$Lat <- as.numeric(locations_bench$Lat)
+locations_bench$Lon <- as.numeric(locations_bench$Lon)
 ```
 
 ```{r}
@@ -200,11 +205,26 @@ bench_lon <- locations_bench$Lon
 ```
 
 ```{r}
+is.numeric(industry_lat)
+is.numeric(industry_lon)
+is.numeric(bench_lat)
+is.numeric(bench_lon)
+
+```
+
+```{r}
 #Convert to X and Y for later. X is lat and Y is Lon
 
 xy_industry <- convertXY(industry_lon, industry_lat)
 xy_bench <- convertXY(bench_lon, bench_lat)
 ```
+
+```{r}
+str(locations_industry)
+str(locations_bench)
+```
+
+
 
 ```{r}
 #Prepare datasets for the next steps - create datasets with pointtype in the df etc.
@@ -258,7 +278,7 @@ X
 KdE1 <- KdEnvelope(
   X, 
   r = seq(0, 3000, 10), 
-  NumberOfSimulations = 1000, 
+  NumberOfSimulations = 100, 
   ReferenceType = "INDUSTRY", 
   Global = TRUE,
   Original = FALSE,
@@ -307,6 +327,11 @@ ggsave(plot = p3, filename = "M_plot.png", device = "png")
 ```{r}
 locations_industry <- read_excel("data/industry.xlsx")
 locations_bench <- read_excel("data/benchmark.xlsx")
+
+locations_industry$Lat <- as.numeric(locations_industry$Lat)
+locations_industry$Lon <- as.numeric(locations_industry$Lon)
+locations_bench$Lat <- as.numeric(locations_bench$Lat)
+locations_bench$Lon <- as.numeric(locations_bench$Lon)
 
 # Extract latitude and longitude values
 industry_lat <- locations_industry$Lat
@@ -391,7 +416,7 @@ write.csv(firms_30, file = "firms_top30.csv", row.names = FALSE)
 library(gridExtra)
 
 # Combine the plots into one image
-combined_plot <- grid.arrange(p1, p2, p3)
+combined_plot <- grid.arrange(p1, p3)
 
 # Save the combined plot to a file
 ggsave(plot = combined_plot, filename = "combined_plot.png", device = "png")
