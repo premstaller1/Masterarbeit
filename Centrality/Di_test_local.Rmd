@@ -17,7 +17,7 @@ install.packages("sp")
 install.packages("ggplot2")
 install.packages("ggfortify")
 install.packages(c("sf", "rnaturalearth", "rnaturalearthdata"))
-
+install.packages("kableExtra")
 ```
 
 ```{r cars}
@@ -171,6 +171,9 @@ library(oce)
 library(sp)
 library(dbmss)
 library(ggplot2)
+library(knitr)
+library(kableExtra)
+
 ```
 
 
@@ -375,11 +378,36 @@ legend("topright", legend = c("Bench", "Industry"), lty = c(1, 2), col = c("blac
 dev.off()
 
 # Calculate global values and concentrations
-result <- globalValues(industry_density, bench_density)
+global_values_result <- globalValues(industry_density, bench_density)
 
-print(result)
+print(global_values_result)
+
+# Format numbers to 3 significant figures
+format_number <- function(x) {
+  format(x, digits = 3, scientific = TRUE)
+}
+
+# Create a data frame to include results in the table
+results_table <- data.frame(
+  Statistic = c("KS Test Statistic", "KS Test p-value", "Mann-Whitney Test Statistic", "Mann-Whitney Test p-value", 
+                "Global Values - Omega", "Global Values - Theta", "Global Values - Delta", "Global Values - MyMean"),
+  Value = c(format_number(ks_test_result$statistic), format_number(ks_test_result$p.value), 
+            format_number(mann_whitney_result$statistic), format_number(mann_whitney_result$p.value),
+            format_number(global_values_result$omega), format_number(global_values_result$theta), 
+            format_number(global_values_result$delta), format_number(global_values_result$myMean))
+)
+
+# Print the results table with lines in a format suitable for thesis
+kable(results_table, caption = "Statistical Test Results and Global Values Comparing Industry and Benchmark Di Values", format = "html") %>%
+  kable_styling(full_width = F) %>%
+  add_header_above(c(" " = 1, "Results" = 1)) %>%
+  row_spec(0, bold = TRUE) %>%
+  column_spec(1, bold = TRUE) %>%
+  kableExtra::kable_styling(latex_options = c("hold_position"))
 
 ```
+
+
 
 ```{r}
 # Detect firms in the first 5% of Di values
