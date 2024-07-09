@@ -18,6 +18,7 @@ install.packages("ggplot2")
 install.packages("ggfortify")
 install.packages(c("sf", "rnaturalearth", "rnaturalearthdata"))
 install.packages("kableExtra")
+install.packages("webshot")
 ```
 
 ```{r cars}
@@ -387,6 +388,13 @@ format_number <- function(x) {
   format(x, digits = 3, scientific = TRUE)
 }
 
+```
+
+```{r}
+webshot::install_phantomjs()
+
+library(webshot)
+
 # Create a data frame to include results in the table
 results_table <- data.frame(
   Statistic = c("KS Test Statistic", "KS Test p-value", "Mann-Whitney Test Statistic", "Mann-Whitney Test p-value", 
@@ -398,15 +406,19 @@ results_table <- data.frame(
 )
 
 # Print the results table with lines in a format suitable for thesis
-kable(results_table, caption = "Statistical Test Results and Global Values Comparing Industry and Benchmark Di Values", format = "html") %>%
-  kable_styling(full_width = F) %>%
-  add_header_above(c(" " = 1, "Results" = 1)) %>%
-  row_spec(0, bold = TRUE) %>%
-  column_spec(1, bold = TRUE) %>%
-  kableExtra::kable_styling(latex_options = c("hold_position"))
+table_html <- kable(results_table, caption = "Statistical Test Results and Global Values Comparing Industry and Benchmark Di Values", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = TRUE, position = "left", font_size = 15) %>%
+  column_spec(1, bold = TRUE, border_right = TRUE) %>%
+  column_spec(2, color = "black", border_left = TRUE) %>%
+  add_header_above(c(" " = 1, "Values" = 1)) %>%
+  kable_classic(full_width = TRUE, html_font = "Arial")
 
+# Save the table as an HTML file first
+save_kable(table_html, file = "results_table.html")
+
+# Convert the HTML file to a PNG image
+webshot("results_table.html", "results_table.png", selector = "table")
 ```
-
 
 
 ```{r}
