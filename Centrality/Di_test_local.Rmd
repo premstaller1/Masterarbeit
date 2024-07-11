@@ -5,6 +5,7 @@ date: "2024-05-11"
 ---
 ```{r}
 #dependencies
+webshot::install_phantomjs()
 
 install.packages("readxl")
 install.packages("dbmss")
@@ -20,6 +21,8 @@ install.packages(c("sf", "rnaturalearth", "rnaturalearthdata"))
 install.packages("kableExtra")
 install.packages("webshot")
 ```
+
+Create relevant functions to calculate the centrality index.
 
 ```{r cars}
 #Function location
@@ -176,9 +179,7 @@ library(knitr)
 library(kableExtra)
 
 ```
-
-
-#New code!
+#Prepare the data for anaylsis, both for the DBMSS library which helps to calculate other centrality indexes and the Di-Index by Scholl & Brenner (2016)
 ```{r}
 #loading data
 
@@ -227,9 +228,6 @@ xy_bench <- convertXY(bench_lon, bench_lat)
 str(locations_industry)
 str(locations_bench)
 ```
-
-
-
 ```{r}
 #Prepare datasets for the next steps - create datasets with pointtype in the df etc.
 
@@ -383,15 +381,10 @@ global_values_result <- globalValues(industry_density, bench_density)
 
 print(global_values_result)
 
-# Format numbers to 3 significant figures
-format_number <- function(x) {
-  format(x, digits = 3, scientific = TRUE)
-}
 
 ```
 
 ```{r}
-webshot::install_phantomjs()
 
 library(webshot)
 
@@ -399,10 +392,10 @@ library(webshot)
 results_table <- data.frame(
   Statistic = c("KS Test Statistic", "KS Test p-value", "Mann-Whitney Test Statistic", "Mann-Whitney Test p-value", 
                 "Global Values - Omega", "Global Values - Theta", "Global Values - Delta", "Global Values - MyMean"),
-  Value = c(format_number(ks_test_result$statistic), format_number(ks_test_result$p.value), 
-            format_number(mann_whitney_result$statistic), format_number(mann_whitney_result$p.value),
-            format_number(global_values_result$omega), format_number(global_values_result$theta), 
-            format_number(global_values_result$delta), format_number(global_values_result$myMean))
+  Value = c(as.character(ks_test_result$statistic), as.character(ks_test_result$p.value), 
+            as.character(mann_whitney_result$statistic), as.character(mann_whitney_result$p.value),
+            as.character(global_values_result$omega), as.character(global_values_result$theta), 
+            as.character(global_values_result$delta), as.character(global_values_result$myMean))
 )
 
 # Print the results table with lines in a format suitable for thesis
