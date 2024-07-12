@@ -88,18 +88,60 @@ This master's thesis aims to explore the hydrogen ecosystem within Hydrogen Vall
 
 ### Data Gathering
 
-- Various data sources were aggregated and cleaned to create a comprehensive dataset.
-- Firm-level data includes the name of the company and its exact location (street, house number, and postcode).
-- Benchmark data was obtained using the Amadeus database for the Energy Sector in the EU.
+- **Sources:** Various data sources were aggregated and cleaned to create a comprehensive dataset. The sources included international associations, national hydrogen associations, specific databases, public/federal project participants, and publicly available or provided data.
+- **Data Types:**
+  - **Actor-based data:** Includes the name of the company and its exact location (street, house number, and postcode).
+  - **Aggregated data:** Includes information aggregated on a country level, such as hydrogen production costs, FCEV fleet data, demand, and production data.
+
+### Data Cleaning
+
+- **Process:**
+  - Duplicate entries (both in address and name) were removed.
+  - Subsidiaries located at the same address were checked and either the headquarter or the specific hydrogen subsidiary was retained.
+  - Missing locations were manually searched and added.
+  - Entries outside continental Europe were deleted.
+- **Result:** The cleaned dataset consisted of 4,242 actors involved in various aspects of the hydrogen economy across Europe.
+
+### Benchmark Data
+
+- **Source:** The benchmark data was obtained using the Amadeus database for the Energy Sector in the EU.
+- **Process:** The initial dataset of 180,000 entries was randomly reduced to 30,000 while maintaining the original distribution of companies per country. After geocoding, the dataset was further reduced to 25,000 entries by removing unrealistic or non-European values.
 
 ### Analysis
 
 - **Cluster Analysis:**
-  - The firm-level cluster index developed by Scholl & Brenner (2016) was used to assess the degree of spatial concentration of hydrogen firms.
-  - DBSCAN (Density-Based Spatial Clustering of Applications with Noise) and KDE (Kernel Density Estimation) were used for additional spatial analysis.
+  - **Firm-Level Cluster Index:** Developed by Scholl & Brenner (2016), this index assesses the degree of spatial concentration of hydrogen firms.
+    - **Key Properties:**
+      - **Cluster Index:** Measures the concentration or dispersion of an industry within a particular area compared to the overall industrial agglomeration.
+      - **Spatial Insight:** Identifies the spatial location of highly clustered firms.
+      - **Interval-scaled Variable:** Computes a unique concentration level for each firm.
+    - **Algorithm:**
+      - Firm-specific spatial concentration values (Di-Values) are calculated by summing the inverted distances between a firm and all other firms in the same industry.
+      - The index is normalized to make it comparable across industries.
+      - The Di values are compared with a benchmark distribution using a kernel density estimator.
+      - Statistical tests (Kolmogorov-Smirnov and Wilcoxon Rank Sum) are used to validate the clustering results.
+  - **DBSCAN (Density-Based Spatial Clustering of Applications with Noise):**
+    - Identifies clusters based on data point density.
+    - Noise tolerance allows for the identification of outlier data points.
+    - Does not require the number of clusters to be predefined.
+    - Parameters used: minimum cluster size (min) = 10, maximum distance between cluster points (eps) = 15,000 meters.
 
 - **GIS Visualization:**
-  - Geographic Information Systems (GIS) were employed to visualize the hydrogen landscape, including production sites, consumption centers, and other attributes.
+  - **Tools:** Geographic Information Systems (GIS) were used to visualize the hydrogen landscape.
+  - **Data Visualized:** Includes production sites, consumption centers, employment data, business areas, and other attributes.
+  - **Methods:**
+    - **Kernel Density Estimation (KDE):** Identifies areas with high density of hydrogen actors.
+    - **DBSCAN Clustering:** Provides insights into the concentration and potential growth areas for the hydrogen industry.
+
+### Results Analysis
+
+- **Global Values and Concentration:** The firm-level index provided insights into the spatial concentration of hydrogen firms relative to benchmark locations.
+- **Spatial Concentration Analysis:** Identified regions with the highest levels of clustering and potential areas for hydrogen valley development.
+- **Descriptive Analysis:** Compared the hydrogen economy across different European countries and analyzed the performance across the hydrogen value chain.
+- **QGIS Visualization:** Visualized the distribution of hydrogen-related actors and the hydrogen value chain to provide a comprehensive understanding of the hydrogen economy in Europe.
+- **Value Chain Analysis:** Visualized the hydrogen value chain along different European countries to identify differences in maturity and development.
+
+"""
 
 ## Contact
 
