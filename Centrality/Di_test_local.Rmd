@@ -3,6 +3,79 @@ title: "DiTest_Local"
 output: html_document
 date: "2024-05-11"
 ---
+
+## Introduction
+
+This document provides an analysis of centrality indexes for industry and benchmark locations using various functions and statistical tests. The analysis includes the installation of required packages, creation of relevant functions, preparation of data, calculation of centrality indexes, and visualization of results.
+
+## Dependencies
+
+Install and load necessary R packages to perform the analysis.
+
+## Functions
+
+Define custom functions to calculate bilateral distances, convert coordinates, compute Di values, and global values.
+
+## Data Preparation
+
+Load and preprocess industry and benchmark location data for analysis. Ensure that latitude and longitude values are numeric and prepare datasets for further processing.
+
+## Conversion of Coordinates
+
+Convert latitude and longitude values to Cartesian coordinates for spatial analysis.
+
+## Combined Data Preparation
+
+Combine industry and benchmark data frames, adding necessary identifiers for analysis with the `dbmss` library.
+
+## wmppp Creation
+
+Create a weighted marked point pattern (`wmppp`) object to facilitate spatial analysis.
+
+### Explanation of wmppp
+
+A weighted marked point pattern (wmppp) is a type of spatial data object that includes both the locations of points and additional information (marks) associated with those points. This can be used to analyze spatial patterns and relationships within the data, such as identifying clusters or patterns of dispersion.
+
+## K(d) Function Analysis
+
+Perform K(d) function analysis using the `KdEnvelope` function for different distance ranges and plot the results.
+
+### Explanation of K(d) Function Analysis
+
+The K(d) function measures the spatial clustering of points. It compares the observed distribution of points to a random distribution to determine if points are more clustered or dispersed than expected by chance. The `KdEnvelope` function generates confidence envelopes through simulations to assess the significance of the observed clustering.
+
+## M Envelope Analysis
+
+Conduct M Envelope analysis to compare industry and benchmark locations and plot the results.
+
+### Explanation of M Envelope Analysis
+
+The M function is used to analyze bivariate spatial relationships, such as interaction or repulsion between two different types of points. The M Envelope analysis creates confidence envelopes based on simulations to determine if the observed spatial relationship is statistically significant compared to a null hypothesis of random distribution.
+
+## Di Index Calculation
+
+Calculate Di values for industry and benchmark locations using the defined functions and perform statistical tests (KS test and Mann-Whitney test) to compare distributions.
+
+## Kernel Density Estimation
+
+Estimate and plot kernel densities for Di values of industry and benchmark locations. Save the plots as images.
+
+## Global Values Calculation
+
+Calculate global dispersion and concentration values based on kernel density estimates.
+
+## Results Table
+
+Create and save a results table summarizing statistical tests and global values. Convert the table to an image for inclusion in reports.
+
+## Firm Detection
+
+Identify firms in the top percentiles of Di values and save the results to CSV files.
+
+## Plot Combination
+
+Combine and save multiple plots into a single image for comprehensive visualization.
+
 ```{r}
 #dependencies
 webshot::install_phantomjs()
@@ -36,26 +109,6 @@ bilatDistance <- function(lo, la){ # gives correctly computed bilateral distancs
   dvect <- dvect[lower.tri(dvect)]
   dvect <- ifelse(dvect > 1, 1, dvect)
   dvect <- radj * acos(dvect)
-  return(dvect)
-}
-
-
-bilatDistance_new <- function(lo, la){ 
-  radj <- 6371
-  la_rad <- 2 * pi * la / 360
-  lo_rad <- 2 * pi * lo / 360
-  coslat <- cos(la_rad)
-  sinlat <- sin(la_rad)
-  
-  # Calculate the differences in longitudes and convert to radians
-  dlon_rad <- outer(lo_rad, lo_rad, "-")
-  
-  # Compute the Haversine formula
-  dvect <- sinlat %o% sinlat + (coslat %o% coslat) * cos(dlon_rad)
-  dvect <- dvect[lower.tri(dvect)]
-  dvect <- ifelse(dvect > 1, 1, dvect)
-  dvect <- radj * acos(dvect)
-  print(dvect)
   return(dvect)
 }
 
