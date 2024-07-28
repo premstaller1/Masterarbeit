@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the data and code used for the analysis presented in the master's thesis titled **"Geographical Distribution and Clustering of the Hydrogen Economy in Europe: An Analysis of Hydrogen Valleys and Value Chain"**. The study explores the hydrogen ecosystem within Hydrogen Valleys through industrial cluster analysis, leveraging firm-level spatial data from diverse sources.
+This repository contains the data and code used for the analysis presented in the master's thesis titled **"Geographical distribution and clustering of the Hydrogen Economy in Europe: An analysis of Hydrogen Valleys and value chains"**. The study explores the hydrogen ecosystem within Hydrogen Valleys through industrial cluster analysis, leveraging firm-level spatial data from diverse sources.
 
 ## Author
 
