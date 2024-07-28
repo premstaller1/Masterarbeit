@@ -20,6 +20,18 @@ This repository contains the data and code used for the analysis presented in th
 
 ## Repository Structure
 
+### Final Datasets:
+The final Datasets can be found in "gahteredData".
+
+- **Hydrogen Industry**
+  - The hydrogen industry dataset created in this thesis is named: "locations_hydro_V14"
+  - It contains Lat, Lon, Name, Full Adress, Address, ZIP, City, Country and the Source.
+    - Not for every actor the individual parts of the address was available (e.g. City, ZIP).
+
+- **Benchmark Industry**
+  - The hydrogen industry dataset created in this thesis is named: "locations_benchmark_V4"
+  - It contains Lat, Lon, Name, Full Adress, Address, ZIP, City, Country
+
 ### Directories
 
 - **.vscode**
@@ -32,16 +44,16 @@ This repository contains the data and code used for the analysis presented in th
   - Includes scripts and data related to centrality analysis.
 
 - **CorrelationAnalysis**
-  - Contains data and notebooks for correlation analysis.
+  - Contains data and notebooks for correlation analysis. Here RQ2 was mostly answered using visualisations and data praparation.
 
 - **gatheredData**
-  - Holds gathered data used across various analyses.
+  - Holds gathered data used across various analyses. 
 
 - **gis**
   - Contains GIS data and related resources.
 
 - **webcrawler**
-  - Includes scripts and data from web crawling activities.
+  - Includes scripts and data from web crawling activities. Here it is visible how the data was gathered using crawlers and the API.
 
 ### Files
 
@@ -82,7 +94,7 @@ This master's thesis aims to explore the hydrogen ecosystem within Hydrogen Vall
    - Sub-questions:
      - How do different European countries perform across various segments of the hydrogen value chain, and what patterns emerge from their relative distribution of activities?
      - Which countries have the most advanced hydrogen value chains, and which are still emerging?
-     - Are there connections between different value chain components that positively or negatively influence each other?
+     - Is there a significant difference in the development of hydrogen value chains among countries with varying numbers of Hydrogen Valleys?
 
 ## Methodology
 
